@@ -1,0 +1,3 @@
+./get_double_sequences.py  gly_rfam.txt
+../scripts/get_original_sequences.py  gly2_rfam.txt gly_seqs 100 100
+../scripts/run_partition.py  gly_seqs/*seq 

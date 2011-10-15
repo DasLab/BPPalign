@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <title>RNAstructure Text Interfaces Help: AllSub</title>
+    <link
+       href="Stylesheet.css"
+       rel="stylesheet"
+       type="text/css"
+    />
+  </head>
+  <body>
+    <div class="bodydiv">
+      <table cellpadding="0" cellspacing="0" border="0" class="mainTable">
+	<tr class="headerRow">
+	  <td class="headerBox">
+	    <img src="icon.jpg" alt="RNAstructure logo"/>
+	  </td>
+	  <td class="headerLabel">
+	    <h1>
+	      RNAstructure Help
+	      <br/>
+	      AllSub
+	    </h1>
+	  </td>
+	  <td class="headerBox2">
+	    <h3><ul>
+	      <li><a href="index.html">Contents</a></li>
+	      <li><a href="AlphabeticalIndex.html">Index</a></li>
+	    </ul></h3>
+	  </td>
+	</tr>
+	<tr><td class="mainContent" colspan="3">
+	    <p>
+	      AllSub is used to generate all possible secondary structures
+	      within a small energy increment above the lowest free energy
+	      structure.
+	    </p>
+
+	    <a name="Usage"><h3>
+		USAGE: AllSub &lt;seq file&gt; &lt;ct file&gt; [options]
+	    </h3></a>
+
+	    <h3 class="leftHeader">Required parameters:</h3>
+	    <table>
+	      <tr>
+		<td class="cell">&lt;seq file&gt;</td>
+		<td>
+		  The name of a file containing an input sequence.
+		  <br/>
+		  Note that lowercase nucleotides are forced single-stranded
+		  in structure prediction.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">&lt;ct file&gt;</td>
+		<td>The name of a CT file to which output will be written.</td>
+	      </tr>
+	    </table>
+
+	    <h3 class="leftHeader">
+	      Options which don't require added values:
+	    </h3>
+	    <table>
+	      <tr>
+		<td class="cell">-d, -D, --DNA</td>
+		<td>
+		  Specify that the sequence is DNA, and DNA parameters are to
+                  be used.
+                  <br/>
+                  Default is to use RNA parameters.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">-h, -H, --help</td>
+		<td>Display the usage details message.</td>
+	      </tr>
+	    </table>
+
+	    <h3 class="leftHeader">Options which require added values:</h3>
+	    <table>
+	      <tr>
+		<td class="cell">-a, -A --absolute</td>
+		<td>
+		  Specify a maximum absolute energy difference in kcal/mol.
+		  All structures between the lowest free energy and the lowest
+		  free energy plus this parameter will be generated. Note that
+                  suboptimal structures are generated until either the absolute
+		  energy difference is reached or until the maximum percent
+		  energy difference is reached (below).
+                  <br/>
+                  Default is determined by the length of the sequence.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">-c, -C, --constraint</td>
+		<td>
+		  Specify a constraints file to be applied. This can be used to
+		  include folding constraints. For AllSub, current supported
+		  constraints are force pairs, force a nucleotide to be single
+		  stranded, and force a nucleotide to be double stranded.
+                  <br/>
+                  Default is to have no constraints applied.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">-p, -P, --percent</td>
+		<td>
+		  Specify a maximum percent energy difference in folding free
+		  energy change for generating suboptimal structures. All
+		  suboptimal structures are generated at two separate energy
+		  thresholds. The first is the lowest folding free energy. The
+		  second is lowest folding free energy minus a difference
+		  fraction. This difference fraction is calculated by dividing
+		  the percent difference by 100, multiplying that value by the
+		  lowest folding free energy, and subtracting the resultant
+		  value from the lowest folding free energy. Note that
+                  suboptimal structures are generated until either the maximum
+                  percent energy difference is reached or until the absolute
+                  energy difference is reached (above).
+                  <br/>
+                  Default is determined by the length of the sequence.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">-t, -T, --temperature</td>
+		<td>
+		  Specify the temperature at which calculation takes place in
+		  Kelvin.
+		  <br/>
+                  Default is 310.15 K, which is 37 degrees C.
+		</td>
+	      </tr>
+	    </table>
+
+	    <a name="Refs"><h3 class="leftHeader">References:</h3></a>
+	    <ol class="noListTopMargin">
+              <li class="gapListItem">
+                Reuter, J.S. and Mathews, D.H.
+                <br/>
+                "RNAstructure: software for RNA secondary structure prediction
+		and analysis."
+		<br/>
+                <i>BMC Bioinformatics</i>, 11:129. (2010).
+              </li>
+	      <li class="gapListItem">
+		Duan, S., Mathews, D.H. and Turner, D.H.
+		<br/>
+		"Interpreting oligonucleotide microarray data to determine RNA
+		secondary structure: application to the 3' end of Bombyx mori
+		R2 RNA."
+		<br/>
+		<i>Biochemistry</i>, 45:9819-9832. (2006).
+	      </li>
+	      <li class="gapListItem">
+		Wuchty, S., Fontana, W., Hofacker, I.L. and Schuster, P.
+		<br/>
+		"Complete suboptimal folding of RNA and the stability of
+                 secondary structures."
+		<br/>
+		<i>Biopolymers</i>, 49:145-165. (1999).
+	      </li>
+	    </ol>
+	</td></tr>
+	<tr><td class="footer" colspan="3">
+	  <p>
+	    Visit
+	    <a href="http://rna.urmc.rochester.edu/RNAstructure.html">
+	      The Mathews Lab RNAstructure Page</a>
+	    for updates and latest information.
+	  </p>
+	</td></tr>
+      </table>
+    </div>
+  </body>
+</html>

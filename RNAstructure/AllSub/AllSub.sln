@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "AllSub", "AllSub.icproj", "{FD96CF21-44A0-4F31-B7C8-DF80CEA94C08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD96CF21-44A0-4F31-B7C8-DF80CEA94C08}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FD96CF21-44A0-4F31-B7C8-DF80CEA94C08}.Debug|Win32.Build.0 = Debug|Win32
+		{FD96CF21-44A0-4F31-B7C8-DF80CEA94C08}.Release|Win32.ActiveCfg = Release|Win32
+		{FD96CF21-44A0-4F31-B7C8-DF80CEA94C08}.Release|Win32.Build.0 = Release|Win32
+		{849052F9-F8C1-4069-89C6-B1EECB419E9B}.Release|Win32.Build.0 = Release|Win32
+		{849052F9-F8C1-4069-89C6-B1EECB419E9B}.Release|Win32.ActiveCfg = Release|Win32
+		{849052F9-F8C1-4069-89C6-B1EECB419E9B}.Debug|Win32.Build.0 = Debug|Win32
+		{849052F9-F8C1-4069-89C6-B1EECB419E9B}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

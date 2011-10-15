@@ -1,0 +1,122 @@
+%!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Write the variables necessary to create the dot plot.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define sequence length, scale, and translation factors.
+/seqLength 304 def
+/scaleFactorX 1.66667 def
+/scaleFactorY 1.66667 def
+/translateFactorX 21.6 def
+/translateFactorY 129.6 def
+
+% Define the size of the dots.
+/dotSize 2 def
+
+% Determine the number of grid lines in each direction.
+/divisions 8 def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Write out the dot plot.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Create the legend array.
+/legend [
+    [(inf <= -log10(BP Probability) <  nan) 1.00 0.00 0.00]
+    [(nan <= -log10(BP Probability) <  nan) 0.5 0.5 0]
+    [(nan <= -log10(BP Probability) <  nan) 0.00 1.00 0.00]
+    [(nan <= -log10(BP Probability) <  nan) 0 0.5 0.5]
+    [(nan <= -log10(BP Probability) <= -inf) 0.00 0.00 1.00]
+] def
+
+% Show the legend.
+/Courier-Bold findfont 8 scalefont setfont
+36 300 moveto
+
+legend { gsave aload pop setrgbcolor show grestore 0 -10 rmoveto } forall
+
+% Write the plot description string.
+/Courier-Bold findfont 12 scalefont setfont
+36 72 moveto
+(FILEPATH/partition_constraint_file_option_test.pfs) show
+
+% Write the translation and scaling of the main image.
+gsave
+scaleFactorX scaleFactorY scale
+translateFactorX translateFactorY translate
+
+% Write the triangle plot border.
+newpath
+0 seqLength moveto
+seqLength seqLength lineto
+seqLength 0 lineto
+closepath
+1 setlinewidth
+stroke
+
+% Write the gridline routine.
+/gridline { newpath moveto lineto stroke } def
+
+% Write the scale number placement routine.
+/scaleNumber {
+    gsave
+    moveto
+    rotate
+    0 -5 rmoveto
+    /increment 12 string def
+    increment cvs
+    increment show
+    grestore
+} def
+
+% Write evenly spaced gridlines.
+/Courier-Bold findfont 5 scalefont setfont
+/counter 0 def
+/number 1 def
+divisions {
+    /x 40 counter mul def
+    /x2 seqLength x sub def
+    /y seqLength 20 add def
+    x y x y 20 sub x sub gridline
+    y seqLength x sub x x2 gridline
+    counter 0 ne { /number counter 10 mul def } if
+    number 90 x seqLength 1 add scaleNumber
+    number 0 seqLength 1 add x2 scaleNumber
+    /counter counter 1 add def
+} repeat
+
+% Write end gridline if seq length isn't divisible by 10.
+seqLength 10 mod 0 ne {
+    seqLength y seqLength y 20 sub gridline
+    seqLength 4 idiv 90 seqLength seqLength 1 add scaleNumber
+    y 0 seqLength 0 gridline
+    seqLength 4 idiv 0 seqLength 1 add 0 scaleNumber
+} if
+
+% Write the dot placement routine.
+/dot {
+    /x exch 4 mul 1 sub def
+    /y exch 4 mul 1 sub def
+    newpath
+    /y seqLength y sub def
+    x y moveto
+    x y dotSize sub lineto
+    x dotSize add y dotSize sub lineto
+    x dotSize add y lineto
+    closepath
+    setrgbcolor
+    fill
+} def
+
+% Write the values array.
+/values [
+] def
+
+% Write the for loop that shows the dots.
+values { aload pop dot } forall
+
+% Restore the original scaling to 100%.
+grestore
+
+showpage

@@ -1,0 +1,9 @@
+inseq=../tests/NAPSS/bm.seq
+indotplot=../tests/NAPSS/bm.dp
+inconstraints=../tests/NAPSS/bm.con
+outct=../tests/NAPSS/NAPSS_test_general.ct
+outpairs=../tests/NAPSS/bm.pp
+maxtracebacks=1000
+percent=25
+windowsize=0
+cutoff=25

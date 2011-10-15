@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "napss", "napss.icproj", "{8BE7C6DF-9CD0-4E3B-B6DF-829C8649CA5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BE7C6DF-9CD0-4E3B-B6DF-829C8649CA5C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8BE7C6DF-9CD0-4E3B-B6DF-829C8649CA5C}.Debug|Win32.Build.0 = Debug|Win32
+		{8BE7C6DF-9CD0-4E3B-B6DF-829C8649CA5C}.Release|Win32.ActiveCfg = Release|Win32
+		{8BE7C6DF-9CD0-4E3B-B6DF-829C8649CA5C}.Release|Win32.Build.0 = Release|Win32
+		{425441B0-1C18-4BA5-9FDB-5BC070324948}.Release|Win32.Build.0 = Release|Win32
+		{425441B0-1C18-4BA5-9FDB-5BC070324948}.Release|Win32.ActiveCfg = Release|Win32
+		{425441B0-1C18-4BA5-9FDB-5BC070324948}.Debug|Win32.Build.0 = Debug|Win32
+		{425441B0-1C18-4BA5-9FDB-5BC070324948}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>RNAstructure Text Interfaces Help: ProbabilityPlot</title>
+    <link
+       href="Stylesheet.css"
+       rel="stylesheet"
+       type="text/css"
+    />
+  </head>
+  <body>
+    <div class="bodydiv">
+      <table cellpadding="0" cellspacing="0" border="0" class="mainTable">
+	<tr class="headerRow">
+	  <td class="headerBox">
+	    <img src="icon.jpg" alt="RNAstructure logo"/>
+	  </td>
+	  <td class="headerLabel">
+	    <h1>
+	      RNAstructure Help
+	      <br/>
+	      ProbabilityPlot
+	    </h1>
+	  </td>
+	  <td class="headerBox2">
+	    <h3><ul>
+	      <li><a href="index.html">Contents</a></li>
+	      <li><a href="AlphabeticalIndex.html">Index</a></li>
+	    </ul></h3>
+	  </td>
+	</tr>
+	<tr><td class="mainContent" colspan="3">
+	    <p>
+	      ProbabilityPlot is used to create a base pairing probabilities
+	      plot after calculating the <a href="partition.html">partition function</a>. The output is a Postscript document. </p>
+
+	    <a name="Usage"><h3>
+	      USAGE: ProbabilityPlot &lt;save file&gt; &lt;ps file&gt; [options]
+	    </h3></a>
+
+	    <h3 class="leftHeader">Required parameters:</h3>
+	    <table>
+	      <tr>
+		<td class="cell">&lt;save file&gt;</td>
+		<td>
+		  The name of a file containing probability data from a
+		  previous <a href="partition.html">partition function calculation</a>. These partition function
+		  save files usually end in ".pfs".
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">&lt;ps file&gt;</td>
+		<td>
+		  The name of a Postscript image file to which output
+		  will be written.
+		</td>
+	      </tr>
+	    </table>
+
+	    <h3 class="leftHeader">
+	      Options which don't require added values:
+	    </h3>
+	    <table>
+	      <tr>
+		<td class="cell">-h, -H, --help</td>
+		<td>Display the usage details message.</td>
+	      </tr>
+	    </table>
+
+	    <h3 class="leftHeader">Options which require added values:</h3>
+	    <table>
+	      <tr>
+		<td class="cell">-e, -E, --entries</td>
+		<td>
+		  Specify the number of categories in the plot legend.
+                  <br/>
+                  Default is 5 entries.
+		</td>
+	      </tr>
+              <tr>
+                <td class="cell">-max, -MAX, --maximum</td>
+                <td>
+		  Specify the maximum value in the plot.
+                  <br/>
+                  Default is the largest valid value in the plot.
+                </td>
+              </tr>
+	      <tr>
+		<td class="cell">-min, -MIN, --minimum</td>
+		<td>
+		  Specify the minimum value in the plot.
+		  <br/>
+		  Default is the smallest valid value in the plot.
+		</td>
+	      </tr>
+	    </table>
+
+	    <a name="Refs"><h3 class="leftHeader">References:</h3></a>
+            <ol class="noListTopMargin">
+              <li class="gapListItem">
+                Reuter, J.S. and Mathews, D.H.
+                <br/>
+                "RNAstructure: software for RNA secondary structure prediction
+                and analysis."
+                <br/>
+                <i>BMC Bioinformatics</i>, 11:129. (2010).
+              </li>
+              <li class="gapListItem">
+		Mathews, D.H.
+		<br/>
+		"Using an RNA secondary structure partition function to
+		determine confidence in base pairs predicted by free
+		energy minimization."
+		<br/>
+		<i>RNA</i>, 10:1178-1190. (2004).
+	      </li>
+              <li class="gapListItem">
+		McCaskill, J.S.
+		<br/>
+		"The equilibrium partition function and base pair
+		probabilities for RNA secondary structure."
+		<br/>
+		<i>Biopolymers</i>, 29:1105-1119. (1990).
+              </li>
+            </ol>
+	</td></tr>
+        <tr><td class="footer" colspan="3">
+          <p>
+            Visit
+            <a href="http://rna.urmc.rochester.edu/RNAstructure.html">
+              The Mathews Lab RNAstructure Page</a>
+            for updates and latest information.
+          </p>
+        </td></tr>
+      </table>
+    </div>
+  </body>
+</html>

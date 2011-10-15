@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "oligoscreen", "oligoscreen.icproj", "{00C4FCCE-B981-4DBD-9C72-4F30C7936B6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00C4FCCE-B981-4DBD-9C72-4F30C7936B6F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{00C4FCCE-B981-4DBD-9C72-4F30C7936B6F}.Debug|Win32.Build.0 = Debug|Win32
+		{00C4FCCE-B981-4DBD-9C72-4F30C7936B6F}.Release|Win32.ActiveCfg = Release|Win32
+		{00C4FCCE-B981-4DBD-9C72-4F30C7936B6F}.Release|Win32.Build.0 = Release|Win32
+		{96E2D606-0D5D-4C13-BEA7-3432C1081167}.Release|Win32.Build.0 = Release|Win32
+		{96E2D606-0D5D-4C13-BEA7-3432C1081167}.Release|Win32.ActiveCfg = Release|Win32
+		{96E2D606-0D5D-4C13-BEA7-3432C1081167}.Debug|Win32.Build.0 = Debug|Win32
+		{96E2D606-0D5D-4C13-BEA7-3432C1081167}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

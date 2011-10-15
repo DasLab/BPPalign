@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "RNAstructure", "RNAstructure.icproj", "{3D66EB08-A0F9-4E76-B480-9F3B1E16BB31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0FBCB8A8-8B0D-453F-9578-FAC9EF8EF075}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D66EB08-A0F9-4E76-B480-9F3B1E16BB31}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D66EB08-A0F9-4E76-B480-9F3B1E16BB31}.Debug|Win32.Build.0 = Debug|Win32
+		{3D66EB08-A0F9-4E76-B480-9F3B1E16BB31}.Release|Win32.ActiveCfg = Release|Win32
+		{3D66EB08-A0F9-4E76-B480-9F3B1E16BB31}.Release|Win32.Build.0 = Release|Win32
+		{D714DA77-D9B5-40D8-8CE6-4E7D39898281}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D714DA77-D9B5-40D8-8CE6-4E7D39898281}.Debug|Win32.Build.0 = Debug|Win32
+		{D714DA77-D9B5-40D8-8CE6-4E7D39898281}.Release|Win32.ActiveCfg = Release|Win32
+		{D714DA77-D9B5-40D8-8CE6-4E7D39898281}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

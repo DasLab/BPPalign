@@ -1,0 +1,48 @@
+﻿<html>
+  <head>
+    <title>RNAstructure Help -- Introduction</title>
+    <link
+      href="Styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>RNAstructure</h1>
+    <h2>Version 5.1</h2>
+    <h2>Copyright 1996 - 2010</h2>
+    <h2>by David H. Mathews</h2>
+    <br/>
+
+    <h3>Introduction</h3>
+
+    <p>The core of RNAstructure is a dynamic programming algorithm to predict RNA or DNA secondary structures from sequence based on the principle of minimizing free energy. The thermodynamic data used for RNA predictions are the latest available from the Turner laboratory.  Several modules are provided to extend the capabilities of secondary structure prediction, including the prediction of a secondary structure common to two sequences, and to make this a user-friendly RNA folding program.</p>
+    <br/>
+
+    <p>RNAstructure was originally written by David H. Mathews for Isis Pharmaceuticals and is made available for the RNA community by Isis. It is available on the Mathews Lab Homepage at <u>http://rna.urmc.rochester.edu</u>.</p>
+    <br/>
+
+    <p>The other modern implementations of the dynamic programming algorithm for RNA secondary structure prediction are mfold, available on the World Wide Web at Michael Zukerís homepage (<u>http://bioinfo.math.rpi.edu/~zukerm/</u>) and the Vienna RNA package, maintained by Ivo Hofacker (<u>http://www.tbi.univie.ac.at/~ivo/RNA/</u>). The implementation of the thermodynamic parameters differs in multibranch and exterior loops, therefore some differences in the predicted lowest free energy structures are expected by different packages.</p>
+    <br/>
+
+    <p>Research benefiting from this program should cite the journal references on which this program is based (See "<a href="References.html">References</a>").</p>
+    <br/>
+
+    <h3><a name="Requirements">Requirements</a></h3>
+    <p>RNAstructure can be run on Windows, Macintosh, or Linux systems.</p>
+    <br/>
+
+    <p>The program requires Java version 1.6 or higher. For best results, the implementation of Java obtained directly from Sun Microsystems should be used. Other implementations may cause aberrant behavior. The Sun implementation of Java can be found at <u>http://www.java.com/en/download/manual.jsp</u>.</p>
+    <p>Note that this version of RNAstructure is not fully compatible with binary files derived from earlier Windows versions of the software.</p>
+    <br/>
+
+    <h3><a name="Acknowledgements">Contributors to Code</a></h3>
+    <p>David Mathews is the primary author of this program.</p>
+    <p>Zhi Lu revised the free energy minimization and the partition function code to predict internal loops of any size in O(N<sup>3</sup>) time.</p>
+    <p>Arif Haramanci contributed the HMM alignment code used to reduce Dynalign's search space.</p>
+    <p>Jessica Reuter contributed the Java interface and shared libraries that allowed the program to be portable across multiple operating systems.</p>
+
+    <h3>Special Thanks</h3>
+    <p>Thanks are deserved to those who helped with the creation of the program, including Marc Brower, Mark Burkard, Karina Burkard, Josh Diamond, Karim Fakhreddine, Sue Freier, Arif Harmanci, James Kim, Zhi John Lu, Jeff McDowell, Olga Matveeva, Jessica Reuter, Jeff Sabina, Gaurav Sharma, Steve Testa, Rahul Tyagi, Doug Turner, Jacqueline Wyatt, and Michael Zuker.</p>
+  </body>
+</html>

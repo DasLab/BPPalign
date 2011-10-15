@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>RNAstructure Text Interfaces Help</title>
+    <link
+       href="Stylesheet.css"
+       rel="stylesheet"
+       type="text/css"
+    />
+  </head>
+  <body>
+    <div class="bodydiv">
+      <table cellpadding="0" cellspacing="0" border="0" class="mainTable">
+	<tr class="headerRow">
+	  <td class="headerBox">
+	    <img src="icon.jpg" alt="RNAstructure logo"/>
+	  </td>
+	  <td class="headerLabel">
+	    <h1>
+	      RNAstructure Help
+	      <br/>
+	      Thermodynamic Parameters
+	    </h1>
+	  </td>
+	  <td class="headerBox2">
+	    <h3><ul>
+	      <li><a href="index.html">Contents</a></li>
+	      <li><a href="AlphabeticalIndex.html">Index</a></li>
+	    </ul></h3>
+	  </td>
+	</tr>
+	<tr><td colspan="3" align="left" class="mainContent">
+	    <p>&nbsp;</p>
+        <h2 class="leftHeader">Specify the location of the thermodynamic parameters       </h2>
+        <p>RNAstructure uses a set of nearest neighbor thermodynamic parameters for predicting folding free energy changes of secondary structures. When an interface is invoked, these parameters are read from disk. The parameters come in the directory RNAstructure/data_tables/. To indicate the location of this directory, an environment variable, DATAPATH, needs to be set to this location. </p>
+        <p>For example, in BASH, this is accomplished with:<br>
+        export DATAPATH=[directory in which RNAstructure resides]/RNAstructure/data_tables/</p>
+        <p>Or, in csh, this is accomplished with:</p>
+        <p>setenv DATAPATH [directory in which RNAstructure resides]/RNAstructure/data_tables/</p>
+        <p><br/>
+  </p>
+        <dl class="noBottomMargin">
+          <dt>&nbsp;</dt>
+</dl>
+	</td></tr>
+	<tr><td class="footer" colspan="3">
+	  <p>
+	    Visit
+	    <a href="http://rna.urmc.rochester.edu/RNAstructure.html">
+	      The Mathews Lab RNAstructure Page</a>
+	    for updates and latest information.
+	  </p>
+	</td></tr>
+      </table>
+    </div>
+  </body>
+</html>

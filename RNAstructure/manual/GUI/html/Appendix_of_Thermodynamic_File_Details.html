@@ -1,0 +1,82 @@
+﻿<html>
+  <head>
+    <title>RNAstructure Help -- Appendix B: An explanation of the thermodynamic parameters used by RNAstructure</title>
+    <link
+      href="Styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>RNAstructure</h1>
+    <h2>Version 5.1</h2>
+    <h2>Copyright 1996 - 2010</h2>
+    <h2>by David H. Mathews</h2>
+    <br/>
+
+    <h3>Appendix B: An explanation of the thermodynamic parameters used by RNAstructure</h3>
+
+    <p>There are nineteen files of free energies for RNA-RNA interactions. The derivation of these parameters is in <a href="References.html">Mathews, Disney, Childs, Schroeder, Zuker, and Turner (2004)</a>. All the parameters used by RNAstructure are for standard free energy at 37&#176C. Here is a brief summary of what the files contain:</p>
+
+    <dl>
+      <dt>Coaxial.dat</dt>
+      <dd>The free energy of coaxial stacking for two helixes with no intervening unpaired nucleotides. When applied, the top nucleotides are the continuous sequence and the bottom nucleotides are interrupted by the rest of the multibranch loop or exterior loop.</dd>
+      <dt>Coaxstack.dat</dt>
+      <dd>The first of the tables for coaxial stacking with an intervening mismatch. This is the stack with the open backbone.</dd>
+      <dt>Dangle.dat</dt>
+      <dd>Presents the free energy of dangling ends (5&#146 or 3&#146). These energies are used in multibranch and exterior loops.</dd>
+      <dt>Hexaloop.dat</dt>
+      <dd>A lookup table for hairpins of six nucleotides.</dd>
+      <dt>Int11.dat</dt>
+      <dd>The lookup table for single mismatches.</dd>
+      <dt>Int21.dat</dt>
+      <dd>A lookup table for the free energy of a 2x1 internal loop. The values presented are the total stability of the loop, including the entropic penalty and the terminal stack bonus.</dd>
+      <dt>Int22.dat</dt>
+      <dd>A lookup table for the free energy of a 2x2 internal loop analogous to the 2x1 internal loop.</dd>
+      <dt>Loop.dat</dt>
+      <dd>A table which contains the entropic penalty for closing hairpin, internal, and bulge loops. Each has its own penalty based on length.</dd>
+      <dt>Miscloop.dat</dt>
+      <dd>Contains miscellaneous loop parameters.</dd>
+      <dt>Stack.dat</dt>
+      <dd>Contains the nearest neighbor parameters for stacking in a helix.</dd>
+      <dt>Tloop.dat</dt>
+      <dd>The tetraloop bonus table. For hairpin loops with four unpaired nucleotides, this table is consulted. If the sequence (starting with the 5&#146 last paired nucleotide and finishing with its 3&#146 paired nucleotide) appears in the table, the bonus is applied to the hairpin’s stability.
+      <dt>Triloop.dat</dt>
+      <dd>A lookup table for hairpin loops of three. It is applied analogously to the tetraloop table in Tloop.dat.</dd>
+      <dt>Tstack.dat</dt>
+      <dd>For terminal mismatch stacking in exterior loops, i.e. loops that contain the ends of the sequence.</dd>
+      <dt>Tstackcoax.dat</dt>
+      <dd>The second of the tables for coaxial stacking with an intervening mismatch. This is the stack with the continuous backbone.</dd>
+      <dt>Tstackh.dat</dt>
+      <dd>Gives the free energy of stacking for a terminal mismatch in a hairpin loop.</dd>
+      <dt>Tstacki.dat</dt>
+      <dd>Gives the free energy of stacking for a terminal mismatch in an internal loop.</dd>
+      <dt>Tstacki23.dat</dt>
+      <dd>Used for terminal mismatch stacking in internal loops of size 2x3 unpaired nucleotides (and 3x2).</dd>
+      <dt>Tstacki1n.dat</dt>
+      <dd>Used for terminal mismatch stacking in internal loops of size 1xn nucleotides where n>2.</dd>
+      <dt>Tstackm.dat</dt>
+      <dd>Used for terminal stacking in a multibranch loop.</dd>
+    </dl>
+    <br/>
+
+    <p/>OligoWalk thermodynamic parameters are specified in two ways. First, special provisions must be taken for the DNA option (see below). Second, for the T<sub>m</sub> calculation in <a name="OligoWalk">OligoWalk</a>, the DH and DS parameters are stored in three files:</p>
+    <ul>
+     <li>helix.dat</li>
+     <li>stack.ds</li>
+     <li>stack.dh</li>
+    </ul>
+    <br/>
+
+    <p>For calculations with <a name="Dynalign">Dynalign</a>, a separate miscloop.dat table, called <u>dynalignmiscloop.dat</u>, is consulted.</p>
+    <br/>
+
+    <p><a name="Enthalpy">Enthalpy</a> change parameters are also now provided to make predictions at temperatures other than 37&#176C. These files are similar to those used for free energy change, but are terminated with the extension "DH".</p>
+    <br/>
+
+    <p><a name="DNA">DNA-DNA</a> parameters are used if the DNA option is selected in oligo walk or if DNA is folded. The DNA files are analogous to the RNA files, but the file names start with the letters "dna".</p>
+    <br/>
+
+    <p>If the DNA option is selected in OligoWalk or OligoScreen, <a name="DNA-RNA">DNA-RNA</a> parameters are used. They are derived from Sugimoto, Nakano, Katoh, Matsumura, Nakamuta, Ohmichi, Yoneyama, & Sasaki. These are contained in <u>stackdr.dat</u>.</p>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+This file spells out the requirements for building RNAstructure.
+
+*nix installation of text interfaces:
+Installation for Unix, Linux, or Mac OS-X requires a current C++ compiler. 
+building.txt provides instructions for building the package.
+
+Windows GUI or text interface building:
+Building the Windows programs requires Microsoft Visual C++, version
+2005 or later, and the Intel C++ compiler, integrated into Visual Studio.  The
+GUI solution for Visual Studio is found in the RNAstructure_windows_interface
+directory. A text interface solution  is found in the
+RNAstructure_windows_text_interfaces directory.
+
+JAVA interface building:
+To build the JAVA interface, the Sun JAVA JVM, version 1.6 or later, is
+required. The version of the JVM that comes from the JDK (Java development kit)
+is essential, because the headers in the "include" directory are necessary for
+successful integration of the interface with the back end. The JAVA interface
+can be run by executing RNAstructure.bat in the exe/ directory, after shared
+libraries have been built in that same location.  In compiler.h, variables
+INCLUDEPATH1 and INCLUDEPATH2 must be set (see compiler.h for details).
+** Note that using other JVMs than the Sun JVM may cause aberrant program
+behavior and/or crashes.

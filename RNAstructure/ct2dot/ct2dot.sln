@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "ct2dot", "ct2dot.icproj", "{2CBA6E4A-4088-4806-B813-A215E9E79A6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CBA6E4A-4088-4806-B813-A215E9E79A6A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2CBA6E4A-4088-4806-B813-A215E9E79A6A}.Debug|Win32.Build.0 = Debug|Win32
+		{2CBA6E4A-4088-4806-B813-A215E9E79A6A}.Release|Win32.ActiveCfg = Release|Win32
+		{2CBA6E4A-4088-4806-B813-A215E9E79A6A}.Release|Win32.Build.0 = Release|Win32
+		{E7DAEA71-2FF5-48CC-ACB3-5631972E1EB3}.Release|Win32.Build.0 = Release|Win32
+		{E7DAEA71-2FF5-48CC-ACB3-5631972E1EB3}.Release|Win32.ActiveCfg = Release|Win32
+		{E7DAEA71-2FF5-48CC-ACB3-5631972E1EB3}.Debug|Win32.Build.0 = Debug|Win32
+		{E7DAEA71-2FF5-48CC-ACB3-5631972E1EB3}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Running OligoScreen...done.
+OligoScreen complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Running OligoScreen...done.
+OligoScreen complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+temperature_option testing started...
+Initializing nucleic acids...done.
+Setting temperature...done.
+Running OligoScreen...done.
+OligoScreen complete.
+No Error: Matches with accepted test.
+temperature_option testing finished.
+

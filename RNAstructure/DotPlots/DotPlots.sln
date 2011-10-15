@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "DotPlots", "DotPlots.icproj", "{C3572840-2277-4444-9281-DE6C93250F95}"
+EndProject
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "DotPlots", "ProbabilityPlots.icproj", "{DDEAEAF3-7DD5-43E8-AE32-66DE0A5705F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3572840-2277-4444-9281-DE6C93250F95}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C3572840-2277-4444-9281-DE6C93250F95}.Debug|Win32.Build.0 = Debug|Win32
+		{C3572840-2277-4444-9281-DE6C93250F95}.Release|Win32.ActiveCfg = Release|Win32
+		{C3572840-2277-4444-9281-DE6C93250F95}.Release|Win32.Build.0 = Release|Win32
+		{34BA6A26-A061-4095-BFF0-9A01AC4FC5C2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{34BA6A26-A061-4095-BFF0-9A01AC4FC5C2}.Debug|Win32.Build.0 = Debug|Win32
+		{34BA6A26-A061-4095-BFF0-9A01AC4FC5C2}.Release|Win32.ActiveCfg = Release|Win32
+		{34BA6A26-A061-4095-BFF0-9A01AC4FC5C2}.Release|Win32.Build.0 = Release|Win32
+		{DDEAEAF3-7DD5-43E8-AE32-66DE0A5705F0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DDEAEAF3-7DD5-43E8-AE32-66DE0A5705F0}.Debug|Win32.Build.0 = Debug|Win32
+		{DDEAEAF3-7DD5-43E8-AE32-66DE0A5705F0}.Release|Win32.ActiveCfg = Release|Win32
+		{DDEAEAF3-7DD5-43E8-AE32-66DE0A5705F0}.Release|Win32.Build.0 = Release|Win32
+		{359B95C7-BB41-459B-A32C-490FC8130B8F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{359B95C7-BB41-459B-A32C-490FC8130B8F}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

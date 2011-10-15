@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: University of Rochester Medical Center, Mathews Lab
+Main-Class: source.RNAstructure
+SplashScreen-Image: images/Splash.gif

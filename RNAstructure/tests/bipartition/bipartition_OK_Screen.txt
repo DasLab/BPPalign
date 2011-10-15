@@ -1,0 +1,28 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Calculating bimolecular partition function...done.
+Bimolecular partition function complete.
+Creating Postscript dot plot image...done.
+Dot plot output complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Calculating bimolecular partition function...done.
+Bimolecular partition function complete.
+Creating Postscript dot plot image...done.
+Dot plot output complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+temperature_option testing started...
+Initializing nucleic acids...done.
+Setting temperature...done.
+Calculating bimolecular partition function...done.
+Bimolecular partition function complete.
+Creating Postscript dot plot image...done.
+Dot plot output complete.
+No Error: Matches with accepted test.
+temperature_option testing finished.
+

@@ -1,0 +1,24 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Analyzing stochastic samples...done.
+Writing output ct file...done.
+Stochastic sampling complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+ensemble_option testing started...
+Initializing nucleic acids...done.
+Analyzing stochastic samples...done.
+Writing output ct file...done.
+Stochastic sampling complete.
+No Error: Matches with accepted test.
+ensemble_option testing finished.
+
+seed_option testing started...
+Initializing nucleic acids...done.
+Analyzing stochastic samples...done.
+Writing output ct file...done.
+Stochastic sampling complete.
+No Error: Matches with accepted test.
+seed_option testing finished.
+

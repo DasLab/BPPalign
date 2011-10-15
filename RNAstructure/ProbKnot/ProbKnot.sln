@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "ProbKnot", "ProbKnot.icproj", "{F7E61825-DC2A-4D6F-87BB-E85BA7A757FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7E61825-DC2A-4D6F-87BB-E85BA7A757FA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F7E61825-DC2A-4D6F-87BB-E85BA7A757FA}.Debug|Win32.Build.0 = Debug|Win32
+		{F7E61825-DC2A-4D6F-87BB-E85BA7A757FA}.Release|Win32.ActiveCfg = Release|Win32
+		{F7E61825-DC2A-4D6F-87BB-E85BA7A757FA}.Release|Win32.Build.0 = Release|Win32
+		{1E60CE1B-97BC-4951-A92D-663DD4AFC486}.Release|Win32.Build.0 = Release|Win32
+		{1E60CE1B-97BC-4951-A92D-663DD4AFC486}.Release|Win32.ActiveCfg = Release|Win32
+		{1E60CE1B-97BC-4951-A92D-663DD4AFC486}.Debug|Win32.Build.0 = Debug|Win32
+		{1E60CE1B-97BC-4951-A92D-663DD4AFC486}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

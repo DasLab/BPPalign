@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>RNAstructure Help -- What's New</title>
+    <link
+      href="Styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>RNAstructure</h1>
+    <h2>Version 5.1</h2>
+    <h2>Copyright 1996 - 2010</h2>
+    <h2>by David H. Mathews</h2>
+    <br/>
+
+    <h3>What's New</h3>
+
+    <p>Version 5.1 (Released 6/30/2010)</p>
+    <ol>
+      <li>The RNA free energy parameter for adding additional helices to a multibranch loop was changed from -0.9 to -0.6 kcal/mol.  This value is that found by linear regression to experimental data. The -0.6 kcal/mol value results in higher average accuracy when using the maximum expected accuracy methods, MEA and ProbKnot. Note that this means that predicted structures may not be identical to those predicted by earlier versions of the software.</li>
+      <li>Menu item names harmonized between Windows GUI and JAVA GUI.</li>
+      <li>Circular drawings for structures with pseudoknots added to Draw module.</li>
+      <li>Improved online help.</li>
+      <li>Fixed a glutch in JAVA version where SHAPE files could not be read from disk.</li>
+      <li>Added the ability to read FASTA-formatted sequence files.</li>
+    </ol>
+
+<p>Version 5.03 (Released 3/22/2010)</p>
+    <ol>
+      <li>Fixed glitch where failure to enter a title in the New Sequence window resulted in invalid sequence files.</li> 
+    </ol><br/>
+
+    <p>Version 5.02 (Released 1/22/2010)</p>
+    <ol>
+      <li>No changes to the GUI.</li> 
+    </ol><br/>
+
+    <p>Version 5.01 (Released 12/30/2009)</p>
+    <ol>
+      <li>Changed the default parameters for SHAPE data pseudo free energy changes to match best practices.</li>
+    </ol><br/>
+
+    <p>Version 5.0 (Released 9/30/2009)</p>
+      <ol>
+        <li>Program is now portable across multiple operating systems.</li>
+        <li>Created "RNA" and "DNA" menus to aim specific calculations at particular nucleic acid types.</li>
+        <li>The option box which allowed the user to write thermodynamic details files for Energy Function 2 (Efn2) was non-functional in version 4.6. This has been corrected.</li>
+        <li>Standardized viewing options for drawing and zooming structures and dot plots.</li>
+       </ol><br/>
+
+     <p>Version 4.6 (Released 5/5/2008)</p>
+       <ol>
+         <li>Added the ability to specify SHAPE data for RNA Fold Single Strand.</li>
+         <li>Added stochastic sampling.</li>
+       </ol><br/>		
+
+     <p>Version 4.5 (Released 4/9/2007)</p>
+       <ol>
+         <li>Added the capability to specify the maximum distance between paired nucleotides.</li>
+         <li>Added HMM alignment method to limit Dynalign's search space in the alignment domain.</li>
+       </ol><br/>
+
+     <p>Version 4.4 (released 8/17/2006)</p>
+       <ol>
+         <li>Generate All Suboptimal Structures module added.</li> 
+         <li>Secondary structures can now be predicted at temperatures other than 37 degrees Celsius.</li>
+         <li>Some menu options in force were grayed out and non-functional in 4.3. This has been corrected.</li>
+        <li>The free energy table for multibranch loops used by Dynalign (dynalignmiscloop.dat) incorrectly used an older set of parameters. This has been corrected. (Note that this was not the case for the Unix source code version of Dynalign, so the two versions are now synchronized.)</li>
+      </ol><br/>
+
+    <p>Version 4.3 (released 3/16/2006)</p>
+      <ol> 
+        <li>Base pair probabilities, as determined by the partition function calculation, can now be output to a text file.</li>
+        <li>Dynalign is greatly accelerated by not considering base pairs that are determined by single sequence secondary structure prediction to only occur in structures with relatively high folding free energy changes. Dynalign is also accelerated by redefining the M parameter that limits the alignments that are considered. A much smaller M can now be used. [Note that as of RNAstructure 4.5, the use of M is deprecated.]</li>
+      </ol>
+  </body>
+</html>

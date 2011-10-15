@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <title>RNAstructure Text Interfaces Help: efn2 (Energy Function 2)</title>
+    <link
+       href="Stylesheet.css"
+       rel="stylesheet"
+       type="text/css"
+    />
+  </head>
+  <body>
+    <div class="bodydiv">
+      <table cellpadding="0" cellspacing="0" border="0" class="mainTable">
+	<tr class="headerRow">
+	  <td class="headerBox">
+	    <img src="icon.jpg" alt="RNAstructure logo"/>
+	  </td>
+	  <td class="headerLabel">
+	    <h1>
+	      RNAstructure Help
+	      <br/>
+	      Energy Function 2 (efn2)
+	    </h1>
+	  </td>
+	  <td class="headerBox2">
+	    <h3><ul>
+	      <li><a href="index.html">Contents</a></li>
+	      <li><a href="AlphabeticalIndex.html">Index</a></li>
+	    </ul></h3>
+	  </td>
+	</tr>
+	<tr><td class="mainContent" colspan="3">
+	    <p>
+	      efn2 (Energy Function 2) is used to calculate the folding free
+	      energy change of a structure or structures in a CT file. The
+	      output from efn2 can be either a simple list of energies or a
+	      detailed breakdown of the calculation.  efn2 does not support structures that contain pseudoknots.
+	    </p>
+
+	    <a name="Usage"><h3>
+	      USAGE: efn2 &lt;ct file&gt; &lt;energy file&gt; [options]
+	    </h3></a>
+
+	    <h3 class="leftHeader">Required parameters:</h3>
+	    <table>
+	      <tr>
+		<td class="cell">&lt;ct file&gt;</td>
+		<td>
+		  The name of a file containing the input structure in CT format.
+		</td>
+	      </tr>
+              <tr>
+                <td class="cell">&lt;energy file&gt;</td>
+                <td>
+		  The energy file to which output is written.
+		  <br/>
+		  The energy file can be written in one of two forms:
+		  <ol class="noListTopMargin">
+		    <li>
+		      Simple List
+		      <br/>
+		      Lists free energy for each structure, lowest first.
+		    </li>
+		    <li>
+		      Thermodynamic details
+		      (if <span class="cell">-w, -W, --writedetails</span> is specified as described below)<br/>
+		      Writes the details of every substructure in each structure,
+		      and corresponding free energy of each.
+		    </li>
+		  </ol>
+		</td>
+              </tr>
+	    </table>
+
+	    <h3 class="leftHeader">
+	      Options which don't require added values:
+	    </h3>
+	    <table>
+	      <tr>
+		<td class="cell">-d, -D, --DNA</td>
+		<td>
+		  Specify that the sequence is DNA, and DNA parameters are to
+		  be used.
+                  <br/>
+                  Default is to use RNA parameters.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">-h, -H, --help</td>
+		<td>Display the usage details message.</td>
+	      </tr>
+	      <tr>
+		<td class="cell">-p, -P, --print</td>
+		<td>
+		  Print the output file to standard output.
+		  <br/>
+		  This won't override default behavior of writing to a file.
+		  <br/>
+		  Thermodynamic files (if written) are not printed, even if
+                  this option is specified, because they can be very large.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">-w, -W, --writedetails</td>
+		<td>
+		  Write a thermodynamic details file.
+		  <br/>
+		  The thermodynamic details file replaces a standard output
+		  (list) file.
+		</td>
+	      </tr>
+	    </table>
+
+	    <h3 class="leftHeader">Options which require added values:</h3>
+	    <table>
+	      <tr>
+		<td class="cell">-t, -T, --temperature</td>
+		<td>
+		  Specify the temperature at which the free energy free should be calculated in
+		  Kelvin.
+                  <br/>
+                  Default is 310.15 K, which is 37 degrees C.
+		</td>
+	      </tr>
+	    </table>
+
+	    <a name="Refs"><h3 class="leftHeader">References:</h3></a>
+            <ol class="noListTopMargin">
+              <li class="gapListItem">
+                Reuter, J.S. and Mathews, D.H.
+                <br/>
+                "RNAstructure: software for RNA secondary structure prediction
+		and analysis."
+                <br/>
+                <i>BMC Bioinformatics</i>, 11:129. (2010).
+              </li>
+	      <li class="gapListItem">
+		Mathews, D.H., Sabina, J., Zuker, M. and Turner, D.H.
+		<br/>
+		"Expanded sequence dependence of thermodynamic parameters
+		provides improved prediction of RNA secondary structure."
+		<br/>
+		<i>J. Mol. Biol.</i>, 288:911-940. (1999).        </td></tr>
+	<tr><td class="footer" colspan="3">
+	  <p>
+	    Visit
+	    <a href="http://rna.urmc.rochester.edu/RNAstructure.html">
+	      The Mathews Lab RNAstructure Page</a>
+	    for updates and latest information.
+	  </p>
+	</td></tr>
+      </table>
+    </div>
+  </body>
+</html>

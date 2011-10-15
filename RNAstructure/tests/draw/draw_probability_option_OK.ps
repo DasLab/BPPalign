@@ -1,0 +1,1556 @@
+%!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set variables for structure 1.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set font size and type.
+/fontSize 12 def
+/quarterFont fontSize 4 div def
+/halfFont fontSize 2 div def
+/Courier-Bold findfont fontSize scalefont setfont
+
+% Set variables for the main description string.
+/horizontalKeyLocation 40 def
+/verticalDescriptionLocation 725 def
+/descriptionString (ENERGY = -33.6  RA7680) def
+
+% Set variables handling number, placement of nucleotides.
+/numBases 76 def
+/labelSpace fontSize def
+/currentBase 0 def
+/currentBase2 0 def
+/basePoints numBases array def
+
+% Create the array of nucleotides.
+/bases [
+    (G) (G) (G) (G) (G) (C) (G) (U) (A) (G) (C) (U) (C) (A) (G) (A) (u) (G) (G) (U) (A) (G) (A) (G) (C) (G) (C) (U) (C) (G) (C) (U) (U) (g) (G) (C) (g) (U) (G) (U) (G) (A) (G) (A) (G) (G) (U) (A) (C) (C) (G) (G) (G) (A) (U) (C) (G) (a) (U) (A) (C) (C) (C) (G) (G) (C) (G) (C) (C) (U) (C) (C) (A) (C) (C) (A) 
+] def
+
+% Write the array of pairings.
+/pairings [
+    [1 72]
+    [2 71]
+    [3 70]
+    [4 69]
+    [5 68]
+    [6 67]
+    [7 66]
+    [10 25]
+    [11 24]
+    [12 23]
+    [13 22]
+    [27 43]
+    [28 42]
+    [29 41]
+    [30 40]
+    [31 39]
+    [49 65]
+    [50 64]
+    [51 63]
+    [52 62]
+    [53 61]
+] def
+
+% Set variables handling number, placement of pairings.
+/numPairings 21 def
+/numPseudoknotted 0 def
+/currentPairing 0 def
+
+% Create the array of nucleotide coordinates.
+/coordinates [
+    [194 225]
+    [196 212]
+    [198 199]
+    [200 186]
+    [202 173]
+    [204 160]
+    [206 147]
+    [226 164]
+    [247 181]
+    [268 199]
+    [281 201]
+    [294 203]
+    [307 205]
+    [316 218]
+    [332 226]
+    [349 224]
+    [361 211]
+    [364 194]
+    [357 179]
+    [341 171]
+    [324 173]
+    [310 182]
+    [297 180]
+    [284 178]
+    [271 176]
+    [245 127]
+    [211 107]
+    [214 94]
+    [217 81]
+    [220 68]
+    [223 55]
+    [236 46]
+    [244 31]
+    [240 14]
+    [226 3]
+    [208 4]
+    [197 16]
+    [195 34]
+    [201 49]
+    [198 62]
+    [195 75]
+    [192 88]
+    [189 101]
+    [170 106]
+    [150 113]
+    [132 126]
+    [119 142]
+    [110 161]
+    [106 182]
+    [93 182]
+    [80 182]
+    [67 182]
+    [54 182]
+    [42 172]
+    [25 168]
+    [10 176]
+    [3 192]
+    [8 209]
+    [23 218]
+    [40 216]
+    [54 205]
+    [67 205]
+    [80 205]
+    [93 205]
+    [106 205]
+    [183 144]
+    [181 157]
+    [179 170]
+    [177 183]
+    [175 196]
+    [173 209]
+    [171 222]
+    [152 242]
+    [144 264]
+    [148 287]
+    [164 304]
+] def
+
+% Create the array of nucleotide number labels.
+/coordinateNumbers [
+    [261 246]
+    [348 124]
+    [266 81]
+    [152 49]
+    [94 135]
+    [62 258]
+    [128 189]
+] def
+
+% Set variables handling scaling, translation of the structure.
+/scaleFactor 1.40659 def
+/scaleFactorX scaleFactor def
+/scaleFactorY scaleFactor def
+/translateFactorX 45 def
+/translateFactorY 90 def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Write out the radial structure.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Write the structure description string.
+horizontalKeyLocation verticalDescriptionLocation moveto
+descriptionString show
+
+% Write the array of annotation colors.
+/annotations [
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.00 0.00 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+] def
+
+% Create the legend array.
+/legend [
+    [(      BP Probability >= 99%) 1.00 0.00 0.00]
+    [(99% > BP Probability >= 95%) 1.00 0.50 0.00]
+    [(95% > BP Probability >= 90%) 0.83 0.83 0.17]
+    [(90% > BP Probability >= 80%) 0.00 0.50 0.00]
+    [(80% > BP Probability >= 70%) 0.00 1.00 0.00]
+    [(70% > BP Probability >= 60%) 0.00 0.67 1.00]
+    [(60% > BP Probability >= 50%) 0.00 0.00 1.00]
+    [(50% > BP Probability) 1.00 0.50 1.00]
+] def
+
+% Show the legend.
+/Courier-Bold findfont 8 scalefont setfont
+40 710 moveto
+
+legend { gsave aload pop setrgbcolor show grestore 0 -10 rmoveto } forall
+
+% Write the translation and scaling of the main image.
+gsave
+scaleFactorX scaleFactorY scale
+translateFactorX translateFactorY translate
+
+% Use repeat loop to write the backbone.
+0 1 numBases {
+    clear
+
+    % Save nucleotide location and write next backbone section.
+    /current coordinates currentBase get def
+    basePoints currentBase current put
+    /base currentBase 1 add def
+    /x current 0 get def
+    /y current 1 get def
+
+    currentBase 0 ne {
+        /previous coordinates currentBase 1 sub get def
+        /prevX previous 0 get def
+        /prevY previous 1 get def
+        newpath prevX prevY moveto x y lineto closepath stroke
+
+        % If necessary, write a line to the future nucleotide label.
+        base 10 mod 0 eq {
+            % Determine where the number label is.
+            /index base 10 idiv 1 sub def
+            /labelCoords coordinateNumbers index get def
+            /labelX labelCoords 0 get def
+            /labelY labelCoords 1 get def
+
+            % Write the line to the number label, if valid.
+            labelX 0 ne labelY 0 ne and {
+                newpath x y moveto labelX labelY lineto stroke
+            } if
+        } if
+    } if
+
+    % Increment base.
+    /currentBase currentBase 1 add def
+} repeat
+
+% Write the pairing lines inside the backbone.
+0 setgray
+3 setlinewidth
+0 1 numPairings {
+    /pair pairings currentPairing get def
+
+    % Determine coordinates of first nucleotide in pair.
+    /base1 pair 0 get 1 sub def
+    /point1 basePoints base1 get def
+    /x1 point1 0 get def
+    /y1 point1 1 get def
+
+    % Determine coordinates of second nucleotide in pair.
+    /base2 pair 1 get 1 sub def
+    /point2 basePoints base2 get def
+    /x2 point2 0 get def
+    /y2 point2 1 get def
+
+    % Draw current pair, then increment current pairing.
+    newpath x1 y1 moveto x2 y2 lineto closepath stroke
+    /currentPairing currentPairing 1 add def
+} repeat
+
+% Use repeat loop to write nucleotides on the backbone.
+0.5 setlinewidth
+0 1 numBases {
+    clear
+
+    % Save the nucleotide location and number.
+    /current coordinates currentBase2 get def
+    /x current 0 get def
+    /y current 1 get def
+    /base currentBase2 1 add def
+
+    % Write the white spacer box behind the nucleotide.
+    1.00 1.00 1.00 setrgbcolor
+    newpath
+    x quarterFont sub 1 sub y quarterFont sub 1 sub moveto
+    0 halfFont quarterFont add rlineto
+    halfFont quarterFont add 0 rlineto
+    0 halfFont quarterFont add -1 mul rlineto
+    closepath fill
+
+    % Set the color of the nucleotide based on the annotation.
+    /color annotations currentBase2 get def
+    color 0 get color 1 get color 2 get setrgbcolor
+
+    % Place the nucleotide in the box.
+    x quarterFont sub y quarterFont sub moveto
+    bases currentBase2 get show
+
+    % If a condition is met for a number label, write a label.
+    base 10 mod 0 eq {
+        % Determine proper length of number label.
+        /stringChars 2 def
+        base 10 ge { /stringChars 3 def } if
+        base 100 ge { /stringChars 4 def } if
+        base 1000 ge { /stringChars 5 def } if
+
+        % Create the number label.
+        /numString stringChars string def
+        base numString cvs
+
+        % Determine where the number label should be.
+        /index base 10 idiv 1 sub def
+        /labelCoords coordinateNumbers index get def
+        /labelX labelCoords 0 get def
+        /labelY labelCoords 1 get def
+
+        % Place the label if it's valid.
+        labelX 0 ne labelY 0 ne and {
+            % Write the white spacer box behind the label.
+            1.00 1.00 1.00 setrgbcolor
+            newpath
+            labelX quarterFont sub 1 sub labelY quarterFont sub 1 sub moveto
+            0 halfFont quarterFont add rlineto
+            halfFont quarterFont add stringChars 1 sub mul 0 rlineto
+            0 halfFont quarterFont add -1 mul rlineto
+            closepath fill
+
+            % Place the label in the box.
+            0.00 0.00 0.00 setrgbcolor
+            labelX quarterFont sub labelY quarterFont sub moveto
+            numString show
+        } if
+    } if
+
+    % Increment base.
+    /currentBase2 currentBase2 1 add def
+} repeat
+
+% Restore the original scaling to 100%.
+grestore
+
+showpage
+%!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set variables for structure 2.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set variables for the main description string.
+/descriptionString (ENERGY = -32.5  RA7680) def
+
+% Set variables handling number, placement of nucleotides.
+/currentBase 0 def
+/currentBase2 0 def
+/basePoints numBases array def
+
+% Write the array of pairings.
+/pairings [
+    [3 33]
+    [4 32]
+    [5 31]
+    [6 30]
+    [7 29]
+    [10 25]
+    [11 24]
+    [12 23]
+    [13 22]
+    [39 74]
+    [40 73]
+    [41 72]
+    [43 71]
+    [44 70]
+    [45 69]
+    [46 68]
+    [47 67]
+    [49 65]
+    [50 64]
+    [51 63]
+    [52 62]
+    [53 61]
+] def
+
+% Set variables handling number, placement of pairings.
+/numPairings 22 def
+/numPseudoknotted 0 def
+/currentPairing 0 def
+
+% Create the array of nucleotide coordinates.
+/coordinates [
+    [361 107]
+    [374 90]
+    [380 70]
+    [393 71]
+    [406 72]
+    [419 73]
+    [432 74]
+    [446 93]
+    [478 98]
+    [498 84]
+    [511 86]
+    [524 88]
+    [537 90]
+    [546 103]
+    [562 111]
+    [579 109]
+    [591 96]
+    [594 79]
+    [587 64]
+    [571 56]
+    [554 58]
+    [540 67]
+    [527 65]
+    [514 63]
+    [501 61]
+    [493 47]
+    [471 34]
+    [446 40]
+    [434 51]
+    [421 50]
+    [408 49]
+    [395 48]
+    [382 47]
+    [363 21]
+    [341 7]
+    [315 4]
+    [290 13]
+    [272 32]
+    [264 58]
+    [251 57]
+    [238 56]
+    [219 47]
+    [198 54]
+    [185 54]
+    [172 54]
+    [159 54]
+    [146 54]
+    [127 45]
+    [106 53]
+    [93 53]
+    [80 53]
+    [67 53]
+    [54 53]
+    [42 43]
+    [25 39]
+    [10 47]
+    [3 63]
+    [8 80]
+    [23 89]
+    [40 87]
+    [54 76]
+    [67 76]
+    [80 76]
+    [93 76]
+    [106 76]
+    [125 86]
+    [146 77]
+    [159 77]
+    [172 77]
+    [185 77]
+    [198 77]
+    [237 79]
+    [250 80]
+    [263 81]
+    [279 102]
+    [299 117]
+] def
+
+% Create the array of nucleotide number labels.
+/coordinateNumbers [
+    [491 131]
+    [578 9]
+    [426 3]
+    [254 10]
+    [94 6]
+    [62 129]
+    [184 124]
+] def
+
+% Set variables handling scaling, translation of the structure.
+/scaleFactor 0.861953 def
+/scaleFactorX scaleFactor def
+/scaleFactorY scaleFactor def
+/translateFactorX 45 def
+/translateFactorY 90 def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Write out the radial structure.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Write the structure description string.
+horizontalKeyLocation verticalDescriptionLocation moveto
+descriptionString show
+
+% Write the array of annotation colors.
+/annotations [
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+] def
+
+% Create the legend array.
+/legend [
+    [(      BP Probability >= 99%) 1.00 0.00 0.00]
+    [(99% > BP Probability >= 95%) 1.00 0.50 0.00]
+    [(95% > BP Probability >= 90%) 0.83 0.83 0.17]
+    [(90% > BP Probability >= 80%) 0.00 0.50 0.00]
+    [(80% > BP Probability >= 70%) 0.00 1.00 0.00]
+    [(70% > BP Probability >= 60%) 0.00 0.67 1.00]
+    [(60% > BP Probability >= 50%) 0.00 0.00 1.00]
+    [(50% > BP Probability) 1.00 0.50 1.00]
+] def
+
+% Show the legend.
+/Courier-Bold findfont 8 scalefont setfont
+40 710 moveto
+
+legend { gsave aload pop setrgbcolor show grestore 0 -10 rmoveto } forall
+
+% Write the translation and scaling of the main image.
+gsave
+scaleFactorX scaleFactorY scale
+translateFactorX translateFactorY translate
+
+% Use repeat loop to write the backbone.
+0 1 numBases {
+    clear
+
+    % Save nucleotide location and write next backbone section.
+    /current coordinates currentBase get def
+    basePoints currentBase current put
+    /base currentBase 1 add def
+    /x current 0 get def
+    /y current 1 get def
+
+    currentBase 0 ne {
+        /previous coordinates currentBase 1 sub get def
+        /prevX previous 0 get def
+        /prevY previous 1 get def
+        newpath prevX prevY moveto x y lineto closepath stroke
+
+        % If necessary, write a line to the future nucleotide label.
+        base 10 mod 0 eq {
+            % Determine where the number label is.
+            /index base 10 idiv 1 sub def
+            /labelCoords coordinateNumbers index get def
+            /labelX labelCoords 0 get def
+            /labelY labelCoords 1 get def
+
+            % Write the line to the number label, if valid.
+            labelX 0 ne labelY 0 ne and {
+                newpath x y moveto labelX labelY lineto stroke
+            } if
+        } if
+    } if
+
+    % Increment base.
+    /currentBase currentBase 1 add def
+} repeat
+
+% Write the pairing lines inside the backbone.
+0 setgray
+3 setlinewidth
+0 1 numPairings {
+    /pair pairings currentPairing get def
+
+    % Determine coordinates of first nucleotide in pair.
+    /base1 pair 0 get 1 sub def
+    /point1 basePoints base1 get def
+    /x1 point1 0 get def
+    /y1 point1 1 get def
+
+    % Determine coordinates of second nucleotide in pair.
+    /base2 pair 1 get 1 sub def
+    /point2 basePoints base2 get def
+    /x2 point2 0 get def
+    /y2 point2 1 get def
+
+    % Draw current pair, then increment current pairing.
+    newpath x1 y1 moveto x2 y2 lineto closepath stroke
+    /currentPairing currentPairing 1 add def
+} repeat
+
+% Use repeat loop to write nucleotides on the backbone.
+0.5 setlinewidth
+0 1 numBases {
+    clear
+
+    % Save the nucleotide location and number.
+    /current coordinates currentBase2 get def
+    /x current 0 get def
+    /y current 1 get def
+    /base currentBase2 1 add def
+
+    % Write the white spacer box behind the nucleotide.
+    1.00 1.00 1.00 setrgbcolor
+    newpath
+    x quarterFont sub 1 sub y quarterFont sub 1 sub moveto
+    0 halfFont quarterFont add rlineto
+    halfFont quarterFont add 0 rlineto
+    0 halfFont quarterFont add -1 mul rlineto
+    closepath fill
+
+    % Set the color of the nucleotide based on the annotation.
+    /color annotations currentBase2 get def
+    color 0 get color 1 get color 2 get setrgbcolor
+
+    % Place the nucleotide in the box.
+    x quarterFont sub y quarterFont sub moveto
+    bases currentBase2 get show
+
+    % If a condition is met for a number label, write a label.
+    base 10 mod 0 eq {
+        % Determine proper length of number label.
+        /stringChars 2 def
+        base 10 ge { /stringChars 3 def } if
+        base 100 ge { /stringChars 4 def } if
+        base 1000 ge { /stringChars 5 def } if
+
+        % Create the number label.
+        /numString stringChars string def
+        base numString cvs
+
+        % Determine where the number label should be.
+        /index base 10 idiv 1 sub def
+        /labelCoords coordinateNumbers index get def
+        /labelX labelCoords 0 get def
+        /labelY labelCoords 1 get def
+
+        % Place the label if it's valid.
+        labelX 0 ne labelY 0 ne and {
+            % Write the white spacer box behind the label.
+            1.00 1.00 1.00 setrgbcolor
+            newpath
+            labelX quarterFont sub 1 sub labelY quarterFont sub 1 sub moveto
+            0 halfFont quarterFont add rlineto
+            halfFont quarterFont add stringChars 1 sub mul 0 rlineto
+            0 halfFont quarterFont add -1 mul rlineto
+            closepath fill
+
+            % Place the label in the box.
+            0.00 0.00 0.00 setrgbcolor
+            labelX quarterFont sub labelY quarterFont sub moveto
+            numString show
+        } if
+    } if
+
+    % Increment base.
+    /currentBase2 currentBase2 1 add def
+} repeat
+
+% Restore the original scaling to 100%.
+grestore
+
+showpage
+%!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set variables for structure 3.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set variables for the main description string.
+/descriptionString (ENERGY = -31.9  RA7680) def
+
+% Set variables handling number, placement of nucleotides.
+/currentBase 0 def
+/currentBase2 0 def
+/basePoints numBases array def
+
+% Write the array of pairings.
+/pairings [
+    [1 72]
+    [2 71]
+    [3 70]
+    [4 69]
+    [5 68]
+    [6 67]
+    [7 66]
+    [8 65]
+    [10 25]
+    [11 24]
+    [12 23]
+    [13 22]
+    [27 43]
+    [28 42]
+    [29 41]
+    [30 40]
+    [31 39]
+    [45 62]
+    [46 61]
+    [47 60]
+    [48 59]
+    [50 57]
+    [51 56]
+] def
+
+% Set variables handling number, placement of pairings.
+/numPairings 23 def
+/numPseudoknotted 0 def
+/currentPairing 0 def
+
+% Create the array of nucleotide coordinates.
+/coordinates [
+    [161 295]
+    [163 282]
+    [165 269]
+    [167 256]
+    [169 243]
+    [171 230]
+    [173 217]
+    [175 204]
+    [209 185]
+    [219 162]
+    [232 164]
+    [245 166]
+    [258 168]
+    [267 181]
+    [283 189]
+    [300 187]
+    [312 174]
+    [315 157]
+    [308 142]
+    [292 134]
+    [275 136]
+    [261 145]
+    [248 143]
+    [235 141]
+    [222 139]
+    [205 119]
+    [185 107]
+    [188 94]
+    [191 81]
+    [194 68]
+    [197 55]
+    [210 46]
+    [218 31]
+    [214 14]
+    [200 3]
+    [182 4]
+    [170 16]
+    [168 34]
+    [175 49]
+    [172 62]
+    [169 75]
+    [166 88]
+    [163 101]
+    [139 117]
+    [125 138]
+    [113 134]
+    [101 130]
+    [89 126]
+    [73 112]
+    [51 113]
+    [39 109]
+    [25 99]
+    [8 102]
+    [3 118]
+    [14 131]
+    [32 131]
+    [44 135]
+    [60 150]
+    [82 148]
+    [94 152]
+    [106 156]
+    [118 160]
+    [130 179]
+    [144 195]
+    [152 201]
+    [150 214]
+    [148 227]
+    [146 240]
+    [144 253]
+    [142 266]
+    [140 279]
+    [138 292]
+    [119 312]
+    [111 334]
+    [115 357]
+    [131 374]
+] def
+
+% Create the array of nucleotide number labels.
+/coordinateNumbers [
+    [212 209]
+    [299 87]
+    [240 81]
+    [126 49]
+    [66 68]
+    [79 197]
+    [95 259]
+] def
+
+% Set variables handling scaling, translation of the structure.
+/scaleFactor 1.57754 def
+/scaleFactorX scaleFactor def
+/scaleFactorY scaleFactor def
+/translateFactorX 45 def
+/translateFactorY 90 def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Write out the radial structure.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Write the structure description string.
+horizontalKeyLocation verticalDescriptionLocation moveto
+descriptionString show
+
+% Write the array of annotation colors.
+/annotations [
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [1.00 0.50 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+] def
+
+% Create the legend array.
+/legend [
+    [(      BP Probability >= 99%) 1.00 0.00 0.00]
+    [(99% > BP Probability >= 95%) 1.00 0.50 0.00]
+    [(95% > BP Probability >= 90%) 0.83 0.83 0.17]
+    [(90% > BP Probability >= 80%) 0.00 0.50 0.00]
+    [(80% > BP Probability >= 70%) 0.00 1.00 0.00]
+    [(70% > BP Probability >= 60%) 0.00 0.67 1.00]
+    [(60% > BP Probability >= 50%) 0.00 0.00 1.00]
+    [(50% > BP Probability) 1.00 0.50 1.00]
+] def
+
+% Show the legend.
+/Courier-Bold findfont 8 scalefont setfont
+40 710 moveto
+
+legend { gsave aload pop setrgbcolor show grestore 0 -10 rmoveto } forall
+
+% Write the translation and scaling of the main image.
+gsave
+scaleFactorX scaleFactorY scale
+translateFactorX translateFactorY translate
+
+% Use repeat loop to write the backbone.
+0 1 numBases {
+    clear
+
+    % Save nucleotide location and write next backbone section.
+    /current coordinates currentBase get def
+    basePoints currentBase current put
+    /base currentBase 1 add def
+    /x current 0 get def
+    /y current 1 get def
+
+    currentBase 0 ne {
+        /previous coordinates currentBase 1 sub get def
+        /prevX previous 0 get def
+        /prevY previous 1 get def
+        newpath prevX prevY moveto x y lineto closepath stroke
+
+        % If necessary, write a line to the future nucleotide label.
+        base 10 mod 0 eq {
+            % Determine where the number label is.
+            /index base 10 idiv 1 sub def
+            /labelCoords coordinateNumbers index get def
+            /labelX labelCoords 0 get def
+            /labelY labelCoords 1 get def
+
+            % Write the line to the number label, if valid.
+            labelX 0 ne labelY 0 ne and {
+                newpath x y moveto labelX labelY lineto stroke
+            } if
+        } if
+    } if
+
+    % Increment base.
+    /currentBase currentBase 1 add def
+} repeat
+
+% Write the pairing lines inside the backbone.
+0 setgray
+3 setlinewidth
+0 1 numPairings {
+    /pair pairings currentPairing get def
+
+    % Determine coordinates of first nucleotide in pair.
+    /base1 pair 0 get 1 sub def
+    /point1 basePoints base1 get def
+    /x1 point1 0 get def
+    /y1 point1 1 get def
+
+    % Determine coordinates of second nucleotide in pair.
+    /base2 pair 1 get 1 sub def
+    /point2 basePoints base2 get def
+    /x2 point2 0 get def
+    /y2 point2 1 get def
+
+    % Draw current pair, then increment current pairing.
+    newpath x1 y1 moveto x2 y2 lineto closepath stroke
+    /currentPairing currentPairing 1 add def
+} repeat
+
+% Use repeat loop to write nucleotides on the backbone.
+0.5 setlinewidth
+0 1 numBases {
+    clear
+
+    % Save the nucleotide location and number.
+    /current coordinates currentBase2 get def
+    /x current 0 get def
+    /y current 1 get def
+    /base currentBase2 1 add def
+
+    % Write the white spacer box behind the nucleotide.
+    1.00 1.00 1.00 setrgbcolor
+    newpath
+    x quarterFont sub 1 sub y quarterFont sub 1 sub moveto
+    0 halfFont quarterFont add rlineto
+    halfFont quarterFont add 0 rlineto
+    0 halfFont quarterFont add -1 mul rlineto
+    closepath fill
+
+    % Set the color of the nucleotide based on the annotation.
+    /color annotations currentBase2 get def
+    color 0 get color 1 get color 2 get setrgbcolor
+
+    % Place the nucleotide in the box.
+    x quarterFont sub y quarterFont sub moveto
+    bases currentBase2 get show
+
+    % If a condition is met for a number label, write a label.
+    base 10 mod 0 eq {
+        % Determine proper length of number label.
+        /stringChars 2 def
+        base 10 ge { /stringChars 3 def } if
+        base 100 ge { /stringChars 4 def } if
+        base 1000 ge { /stringChars 5 def } if
+
+        % Create the number label.
+        /numString stringChars string def
+        base numString cvs
+
+        % Determine where the number label should be.
+        /index base 10 idiv 1 sub def
+        /labelCoords coordinateNumbers index get def
+        /labelX labelCoords 0 get def
+        /labelY labelCoords 1 get def
+
+        % Place the label if it's valid.
+        labelX 0 ne labelY 0 ne and {
+            % Write the white spacer box behind the label.
+            1.00 1.00 1.00 setrgbcolor
+            newpath
+            labelX quarterFont sub 1 sub labelY quarterFont sub 1 sub moveto
+            0 halfFont quarterFont add rlineto
+            halfFont quarterFont add stringChars 1 sub mul 0 rlineto
+            0 halfFont quarterFont add -1 mul rlineto
+            closepath fill
+
+            % Place the label in the box.
+            0.00 0.00 0.00 setrgbcolor
+            labelX quarterFont sub labelY quarterFont sub moveto
+            numString show
+        } if
+    } if
+
+    % Increment base.
+    /currentBase2 currentBase2 1 add def
+} repeat
+
+% Restore the original scaling to 100%.
+grestore
+
+showpage
+%!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set variables for structure 4.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set variables for the main description string.
+/descriptionString (ENERGY = -31.0  RA7680) def
+
+% Set variables handling number, placement of nucleotides.
+/currentBase 0 def
+/currentBase2 0 def
+/basePoints numBases array def
+
+% Write the array of pairings.
+/pairings [
+    [1 72]
+    [2 71]
+    [3 70]
+    [4 69]
+    [5 68]
+    [6 67]
+    [7 66]
+    [11 43]
+    [12 42]
+    [13 41]
+    [14 40]
+    [16 38]
+    [19 36]
+    [20 35]
+    [22 33]
+    [23 32]
+    [24 31]
+    [25 30]
+    [49 65]
+    [50 64]
+    [51 63]
+    [52 62]
+    [53 61]
+] def
+
+% Set variables handling number, placement of pairings.
+/numPairings 23 def
+/numPseudoknotted 0 def
+/currentPairing 0 def
+
+% Create the array of nucleotide coordinates.
+/coordinates [
+    [164 308]
+    [166 295]
+    [168 282]
+    [170 269]
+    [172 256]
+    [174 243]
+    [176 230]
+    [185 221]
+    [195 211]
+    [204 201]
+    [214 191]
+    [225 184]
+    [236 177]
+    [247 170]
+    [268 166]
+    [280 147]
+    [298 149]
+    [320 133]
+    [324 115]
+    [334 107]
+    [355 102]
+    [366 82]
+    [376 74]
+    [386 66]
+    [396 58]
+    [412 52]
+    [418 36]
+    [408 23]
+    [391 25]
+    [382 40]
+    [372 48]
+    [362 56]
+    [352 64]
+    [330 70]
+    [320 89]
+    [310 97]
+    [279 100]
+    [267 128]
+    [244 132]
+    [234 151]
+    [223 158]
+    [212 165]
+    [201 172]
+    [179 168]
+    [159 166]
+    [139 172]
+    [122 185]
+    [110 203]
+    [106 224]
+    [93 224]
+    [80 224]
+    [67 224]
+    [54 224]
+    [42 214]
+    [25 210]
+    [10 218]
+    [3 234]
+    [8 251]
+    [23 260]
+    [40 258]
+    [54 247]
+    [67 247]
+    [80 247]
+    [93 247]
+    [106 247]
+    [153 227]
+    [151 240]
+    [149 253]
+    [147 266]
+    [145 279]
+    [143 292]
+    [141 305]
+    [122 325]
+    [114 347]
+    [118 370]
+    [134 387]
+] def
+
+% Create the array of nucleotide number labels.
+/coordinateNumbers [
+    [0 0]
+    [363 144]
+    [353 3]
+    [207 112]
+    [94 177]
+    [62 300]
+    [98 272]
+] def
+
+% Set variables handling scaling, translation of the structure.
+/scaleFactor 1.22488 def
+/scaleFactorX scaleFactor def
+/scaleFactorY scaleFactor def
+/translateFactorX 45 def
+/translateFactorY 90 def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Write out the radial structure.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Write the structure description string.
+horizontalKeyLocation verticalDescriptionLocation moveto
+descriptionString show
+
+% Write the array of annotation colors.
+/annotations [
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [1.00 0.50 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.83 0.83 0.17]
+    [0.00 0.00 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.67 1.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+    [0.00 0.00 0.00]
+] def
+
+% Create the legend array.
+/legend [
+    [(      BP Probability >= 99%) 1.00 0.00 0.00]
+    [(99% > BP Probability >= 95%) 1.00 0.50 0.00]
+    [(95% > BP Probability >= 90%) 0.83 0.83 0.17]
+    [(90% > BP Probability >= 80%) 0.00 0.50 0.00]
+    [(80% > BP Probability >= 70%) 0.00 1.00 0.00]
+    [(70% > BP Probability >= 60%) 0.00 0.67 1.00]
+    [(60% > BP Probability >= 50%) 0.00 0.00 1.00]
+    [(50% > BP Probability) 1.00 0.50 1.00]
+] def
+
+% Show the legend.
+/Courier-Bold findfont 8 scalefont setfont
+40 710 moveto
+
+legend { gsave aload pop setrgbcolor show grestore 0 -10 rmoveto } forall
+
+% Write the translation and scaling of the main image.
+gsave
+scaleFactorX scaleFactorY scale
+translateFactorX translateFactorY translate
+
+% Use repeat loop to write the backbone.
+0 1 numBases {
+    clear
+
+    % Save nucleotide location and write next backbone section.
+    /current coordinates currentBase get def
+    basePoints currentBase current put
+    /base currentBase 1 add def
+    /x current 0 get def
+    /y current 1 get def
+
+    currentBase 0 ne {
+        /previous coordinates currentBase 1 sub get def
+        /prevX previous 0 get def
+        /prevY previous 1 get def
+        newpath prevX prevY moveto x y lineto closepath stroke
+
+        % If necessary, write a line to the future nucleotide label.
+        base 10 mod 0 eq {
+            % Determine where the number label is.
+            /index base 10 idiv 1 sub def
+            /labelCoords coordinateNumbers index get def
+            /labelX labelCoords 0 get def
+            /labelY labelCoords 1 get def
+
+            % Write the line to the number label, if valid.
+            labelX 0 ne labelY 0 ne and {
+                newpath x y moveto labelX labelY lineto stroke
+            } if
+        } if
+    } if
+
+    % Increment base.
+    /currentBase currentBase 1 add def
+} repeat
+
+% Write the pairing lines inside the backbone.
+0 setgray
+3 setlinewidth
+0 1 numPairings {
+    /pair pairings currentPairing get def
+
+    % Determine coordinates of first nucleotide in pair.
+    /base1 pair 0 get 1 sub def
+    /point1 basePoints base1 get def
+    /x1 point1 0 get def
+    /y1 point1 1 get def
+
+    % Determine coordinates of second nucleotide in pair.
+    /base2 pair 1 get 1 sub def
+    /point2 basePoints base2 get def
+    /x2 point2 0 get def
+    /y2 point2 1 get def
+
+    % Draw current pair, then increment current pairing.
+    newpath x1 y1 moveto x2 y2 lineto closepath stroke
+    /currentPairing currentPairing 1 add def
+} repeat
+
+% Use repeat loop to write nucleotides on the backbone.
+0.5 setlinewidth
+0 1 numBases {
+    clear
+
+    % Save the nucleotide location and number.
+    /current coordinates currentBase2 get def
+    /x current 0 get def
+    /y current 1 get def
+    /base currentBase2 1 add def
+
+    % Write the white spacer box behind the nucleotide.
+    1.00 1.00 1.00 setrgbcolor
+    newpath
+    x quarterFont sub 1 sub y quarterFont sub 1 sub moveto
+    0 halfFont quarterFont add rlineto
+    halfFont quarterFont add 0 rlineto
+    0 halfFont quarterFont add -1 mul rlineto
+    closepath fill
+
+    % Set the color of the nucleotide based on the annotation.
+    /color annotations currentBase2 get def
+    color 0 get color 1 get color 2 get setrgbcolor
+
+    % Place the nucleotide in the box.
+    x quarterFont sub y quarterFont sub moveto
+    bases currentBase2 get show
+
+    % If a condition is met for a number label, write a label.
+    base 10 mod 0 eq {
+        % Determine proper length of number label.
+        /stringChars 2 def
+        base 10 ge { /stringChars 3 def } if
+        base 100 ge { /stringChars 4 def } if
+        base 1000 ge { /stringChars 5 def } if
+
+        % Create the number label.
+        /numString stringChars string def
+        base numString cvs
+
+        % Determine where the number label should be.
+        /index base 10 idiv 1 sub def
+        /labelCoords coordinateNumbers index get def
+        /labelX labelCoords 0 get def
+        /labelY labelCoords 1 get def
+
+        % Place the label if it's valid.
+        labelX 0 ne labelY 0 ne and {
+            % Write the white spacer box behind the label.
+            1.00 1.00 1.00 setrgbcolor
+            newpath
+            labelX quarterFont sub 1 sub labelY quarterFont sub 1 sub moveto
+            0 halfFont quarterFont add rlineto
+            halfFont quarterFont add stringChars 1 sub mul 0 rlineto
+            0 halfFont quarterFont add -1 mul rlineto
+            closepath fill
+
+            % Place the label in the box.
+            0.00 0.00 0.00 setrgbcolor
+            labelX quarterFont sub labelY quarterFont sub moveto
+            numString show
+        } if
+    } if
+
+    % Increment base.
+    /currentBase2 currentBase2 1 add def
+} repeat
+
+% Restore the original scaling to 100%.
+grestore
+
+showpage

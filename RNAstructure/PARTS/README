@@ -1,0 +1,134 @@
+This is the README file for PARTS version 12.19.09.12.42.07
+
+==========================================================================================================================
+This document includes following about PARTS program:
+1) Legal Notice
+2) Description and Citation
+3) Installation
+4) Usage 
+
+==========================================================================================================================
+1) Legal Notice
+
+   Copyright 2007-2008-2009 Arif Ozgun Harmanci, Gaurav Sharma, David H. Mathews.
+
+   This file is part of PARTS.
+
+
+   PARTS is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   PARTS is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with PARTS.  If not, see <http://www.gnu.org/licenses/>
+
+==========================================================================================================================
+2) Description and Citation
+
+PARTS is a pairwise RNA secondary structure and alignment prediction program.
+
+PARTS 12.19.09.12.42.07 - See CHANGES for differences in previous versions.
+PARTS is distributed under GNU general public license, please refer to COPYING
+for license terms and conditions!
+
+Citation:
+Arif Ozgun Harmanci, Gaurav Sharma, David H. Mathews
+PARTS: Probabilistic Alignment for joinT Structure prediction,
+Nucleic Acids Res., April 2008; 36: 2406 - 2417. 
+
+Arif Ozgun Harmanci, Gaurav Sharma, David H. Mathews
+Stochastic sampling of the RNA structural alignment space
+Nucleic Acids Res., July 2009; 37: 4063 - 4075. 
+
+==========================================================================================================================
+3) Installation
+
+Run make under PARTS/ directory. PARTS is built under release. 
+
+==========================================================================================================================
+4) Usage
+
+PARTS can be run in 3 modes:
+1. MAP mode: Computation of structural alignment with maximum a posteriori probability
+2. PP mode: Computation of posterior probabilities of base pairing
+3. Stochastic Sampling mode: Stochastic sampling structural alignments from pseudo-Boltzmann ensemble
+
+For all the other options, type PARTS on command line.
+
+Example:
+a) Build PARTS as described above.
+b) cd to release/ directory.
+c) type:
+
+./PARTS input/RD0260.seq input/RD0500.seq -map
+
+OR
+
+./PARTS input/RD0260.seq input/RE2140.seq -pp
+
+OR 
+
+./PARTS conf.txt
+
+d) PARTS should start running, with the progress bar moving on command line.
+e1) MAP output structures are output to release/ directory, respectively.
+e2) Posterior probabilities are output to release/ directory
+
+==========================================================================================================================
+Configuration file format:
+Configuration file (named conf.txt in the above example), is formatted as a multi line ascii file
+such that each line contains "[option] [value]", specifying a value for the option. "seq1", "seq2", and
+"mode" are mandatory options. The values are the same as command line values for corresponding options. 
+
+For example:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+seq1 RD0260.seq
+seq2 RE2140.seq
+seq1_op_prefix RD0260
+seq2_op_prefix RE2140
+mode stochsample
+n_samp 1500
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+makes PARTS do a stochastic sampling of 1500 structural alignments (1500 structures for each sequence and 
+1500 alignments) for sequence data in RD0260.seq and RE2140.seq. 
+
+==========================================================================================================================
+Output file naming:
+PARTS uses prefixes for each sequence to generate output file names. By default, the 
+prefixes are set to "seq1" and "seq2". The prefixes can be specified at the command line 
+by -seq1_op_prefix and -seq2_op_prefix respectively. For instance:
+
+./PARTS input/RD0260.seq input/RE2140.seq -map -seq1_op_prefix RD0260 -seq2_op_prefix RE2140
+
+Computes the MAP structural alignment for RD0260.seq and RE2140.seq and generates output files:
+RD0260_map_ct.ct
+RE2140_map_ct.ct
+RD0260_RE2140_map_aln.aln
+
+And;
+
+./PARTS input/RD0260.seq input/RE2140.seq -pp -seq1_op_prefix RD0260 -seq2_op_prefix RE2140
+
+Computes the posterior probabilities of base pairing for each sequence and dumps the probabilities to
+RD0260_pp.txt and RE2140_pp.txt files. The content of each file is formatted as a matrix of NxN 
+entries where (i,j)'th entry is the linear probability of base pairing for the corresponding sequence.
+
+And;
+
+./PARTS input/RD0260.seq input/RE2140.seq -stochsample -nsamp 1001 -seq1_op_prefix RD0260 -seq2_op_prefix RE2140
+
+Generates 1001 structural alignments and dumps the structures and alignments into RD0260_sampled_cts.ct,
+RE2140_sampled_cts.ct, RD0260_RE2140_sampled_alns.aln
+
+==========================================================================================================================
+
+Copyright 2007-2008-2009, Arif Ozgun Harmanci, Gaurav Sharma, David H. Mathews.
+
+

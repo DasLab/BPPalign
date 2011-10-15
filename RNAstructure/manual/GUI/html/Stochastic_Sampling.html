@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>RNAstructure Help -- Stochastic Sampling</title>
+    <link
+      href="Styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>RNAstructure</h1>
+    <h2>Version 5.1</h2>
+    <h2>Copyright 1996 - 2010</h2>
+    <h2>by David H. Mathews</h2>
+    <br/>
+
+    <h3>Stochastic Sampling</h3>
+
+    <p>The stochastic sampling module generates a sample of secondary structures, with the probability of choosing a secondary structure equal to its probability of occurrence in the complete folding ensemble.</p>
+    <br/>
+
+    <p><b>How to Predict a Stochastic Sample</b></p>
+    <ol>
+      <li>Do a partition function calculation with the sequence of interest. (See "<a href="Partition_Function.html">Partition Function</a>.") Any folding constraints must be applied at the partition function calculation step. Also, any changes in the folding temperature must be applied at the partition function step.</li>
+      <li>Start the module by choosing "Stochastic Sampling". This module is available for both RNA and DNA.</li>
+      <li>Click the button labeled "Partition Function Save File" to choose a save file for use in sampling.</li>
+      <li>The default value of the output file, which is filled in after save file selection, can be changed by clicking the "CT File" button.</li>
+      <li>The default ensemble size and random seed can also be changed. Changing the random seed changes the sample of structures generated.</li>
+      <li>Click "Start" to run the calculation. A progress bar will open to show the progress of the sampling.</li>
+      <li>When the calculation is complete, the option is given to draw the set of structures sampled. Click "OK" to draw the structures or "Cancel" to exit the module.</li>
+    </ol>
+  </body>
+</html>

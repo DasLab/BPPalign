@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>RNAstructure Help -- Maximum Expected Accuracy</title>
+    <link
+      href="Styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>RNAstructure</h1>
+    <h2>Version 5.1</h2>
+    <h2>Copyright 1996 - 2010</h2>
+    <h2>by David H. Mathews</h2>
+    <br/>
+
+    <h3>MaxExpect: Maximum Expected Accuracy Structures</h3>
+
+    <p>This module predicts structures with maximum and near maximum expected accuracy. These are structures that maximize pair probabilities. (See the exact scoring function below.)</p>
+    <br/>
+
+    <p><b>Predicting Maximum Expected Accuracy Structures</b></p>
+    <ol>
+      <li>First choose a save file from a previous <a href="Partition_Function.html">partition function</a> calculation. Click the button labeled "Partition Function Save File." A dialog box will open to get the name of a PFS file.</li>
+      <li>A default name is provided for the output file that will contain the predicted structures. This can be changed by clicking the "CT File" button.</li>
+      <li>Change the weight given to pairs by editing the default value for "Gamma." The default is generally the best option.</li>
+      <li>Change suboptimal structure parameters by changing the appropriate values under "Suboptimal Structure Parameters." The maximum number of suboptimal structures is controlled by both the &quot;Max % Score Difference&quot; and the &quot;Max Number of Structures.&quot; Structures are generated until either the max number of structures is reached or the scores differ by greater than Max % Score Difference from the optimal score.&quot;Window&quot; controls how different the structures are from each other. A higher Window will generate structures that are more different and a small Window (such as zero) will result in structures that are more subtly different. </li>
+      <li>Press the "Start" button.</li>
+      <li>When the calculation is complete, you will be asked whether to <a href="Draw.html">draw</a> the predicted structure on the screen.</li>
+    </ol>
+    <p>&nbsp;</p>
+    <p><strong>The scoring function used is:</strong></p>
+    <p>score = gamma*(sum of pair probabilities for pairs) + (sum of unpairing probabilities for unpaired nucleotides)<br>
+    </p>
+  </body>
+</html>

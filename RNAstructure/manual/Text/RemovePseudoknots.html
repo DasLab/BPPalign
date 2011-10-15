@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>RNAstructure Text Interfaces Help: RemovePseudoknots</title>
+    <link
+       href="Stylesheet.css"
+       rel="stylesheet"
+       type="text/css"
+    />
+  </head>
+  <body>
+    <div class="bodydiv">
+      <table cellpadding="0" cellspacing="0" border="0" class="mainTable">
+	<tr class="headerRow">
+	  <td class="headerBox">
+	    <img src="icon.jpg" alt="RNAstructure logo"/>
+	  </td>
+	  <td class="headerLabel">
+	    <h1>
+	      RNAstructure Help
+	      <br/>
+	      RemovePseudoknots
+	    </h1>
+	  </td>
+	  <td class="headerBox2">
+	    <h3><ul>
+	      <li><a href="index.html">Contents</a></li>
+	      <li><a href="AlphabeticalIndex.html">Index</a></li>
+	    </ul></h3>
+	  </td>
+	</tr>
+	<tr><td class="mainContent" colspan="3">
+	    <p>
+	      RemovePseudoknots takes a structure and breaks pairs to generate a pseudoknot-free structure with lowest folding free energy change.</p>
+
+	    <a name="Usage"><h3>
+	      USAGE: RemovePseudoknots &lt;input ct file&gt;
+	      &lt;output ct file&gt; [options]
+	    </h3></a>
+
+	    <h3 class="leftHeader">Required parameters:</h3>
+	    <table>
+	      <tr>
+		<td class="cell">&lt;input ct file&gt;</td>
+		<td>
+		  The name of a file containing pseudoknotted structure data in ct format.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">&lt;output ct file&gt;</td>
+		<td>
+		  The name of a pseudoknot-free CT file to which output will be
+		  written.
+		</td>
+	      </tr>
+	    </table>
+
+	    <h3 class="leftHeader">
+	      Options which don't require added values:
+	    </h3>
+	    <table>
+	      <tr>
+		<td class="cell">-d, -D, --DNA</td>
+		<td>
+		  Specify that the sequence is DNA, and DNA parameters are to
+		  be used.
+                  <br/>
+                  Default is to use RNA parameters.
+		</td>
+	      </tr>
+	      <tr>
+		<td class="cell">-h, -H, --help</td>
+		<td>Display the usage details message.</td>
+	      </tr>
+	    </table>
+
+	    <h3 class="leftHeader">Options which require added values:</h3>
+	    <table>
+	      <tr>
+		<td class="cell">-t, -T, --temperature</td>
+		<td>
+		  Specify the temperature at which calculation takes place in
+		  Kelvin.
+                  <br/>
+                  Default is 310.15 K, which is 37 degrees C.
+		</td>
+	      </tr>
+	    </table>
+
+	    <a name="Refs"><h3 class="leftHeader">References</h3></a>
+	    <p><span class="gapListItem">Reuter, J.S. and Mathews, D.H. <br/>
+"RNAstructure: software for RNA secondary structure prediction
+                and analysis." <br/><i>BMC Bioinformatics</i>, 11:129. (2010). </span></p>
+	    <p>Smit, S., Rother, K., Heringa, J. and Knight, R.  <br/>"From knotted to nested RNA structures: a variety of computational methods for pseudoknot removal."<br/>
+	      <em>RNA</em>, 14  : 410-416. (2008)</p></td></tr>
+	<tr><td class="footer" colspan="3">
+	  <p>
+	    Visit
+	    <a href="http://rna.urmc.rochester.edu/RNAstructure.html">
+	      The Mathews Lab RNAstructure Page</a>
+	    for updates and latest information.
+	  </p>
+	</td></tr>
+      </table>
+    </div>
+  </body>
+</html>

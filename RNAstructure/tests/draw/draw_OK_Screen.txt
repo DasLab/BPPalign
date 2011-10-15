@@ -1,0 +1,18 @@
+without_options testing started...
+Drawing structure(s)...done.
+Structure drawing complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+probability_option testing started...
+Drawing structure(s)...done.
+Structure drawing complete.
+No Error: Matches with accepted test.
+probability_option testing finished.
+
+shape_option testing started...
+Drawing structure(s)...done.
+Structure drawing complete.
+No Error: Matches with accepted test.
+shape_option testing finished.
+

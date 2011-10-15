@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "DuplexFold", "DuplexFold.icproj", "{C16A754D-446E-47A4-B8FD-A0B6F67B249E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C16A754D-446E-47A4-B8FD-A0B6F67B249E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C16A754D-446E-47A4-B8FD-A0B6F67B249E}.Debug|Win32.Build.0 = Debug|Win32
+		{C16A754D-446E-47A4-B8FD-A0B6F67B249E}.Release|Win32.ActiveCfg = Release|Win32
+		{C16A754D-446E-47A4-B8FD-A0B6F67B249E}.Release|Win32.Build.0 = Release|Win32
+		{DF55449B-223B-48FE-B837-6124D5B4508A}.Release|Win32.Build.0 = Release|Win32
+		{DF55449B-223B-48FE-B837-6124D5B4508A}.Release|Win32.ActiveCfg = Release|Win32
+		{DF55449B-223B-48FE-B837-6124D5B4508A}.Debug|Win32.Build.0 = Debug|Win32
+		{DF55449B-223B-48FE-B837-6124D5B4508A}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

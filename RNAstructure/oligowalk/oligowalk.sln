@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "oligowalk", "oligowalk.icproj", "{0A28D961-731B-4FEF-B68F-19392D3EF6DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A28D961-731B-4FEF-B68F-19392D3EF6DE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0A28D961-731B-4FEF-B68F-19392D3EF6DE}.Debug|Win32.Build.0 = Debug|Win32
+		{0A28D961-731B-4FEF-B68F-19392D3EF6DE}.Release|Win32.ActiveCfg = Release|Win32
+		{0A28D961-731B-4FEF-B68F-19392D3EF6DE}.Release|Win32.Build.0 = Release|Win32
+		{066F92B6-46A5-4C68-B44A-D61C54B9731D}.Release|Win32.Build.0 = Release|Win32
+		{066F92B6-46A5-4C68-B44A-D61C54B9731D}.Release|Win32.ActiveCfg = Release|Win32
+		{066F92B6-46A5-4C68-B44A-D61C54B9731D}.Debug|Win32.Build.0 = Debug|Win32
+		{066F92B6-46A5-4C68-B44A-D61C54B9731D}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

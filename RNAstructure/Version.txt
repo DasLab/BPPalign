@@ -1,0 +1,1 @@
+This is version 5.1 of RNAstructure.  Release date is 06/30/2010.

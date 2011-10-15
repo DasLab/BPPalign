@@ -1,0 +1,16 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Determining probable structures...done.
+Writing output ct file...done.
+Calculation of probable structures complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+threshold_option testing started...
+Initializing nucleic acids...done.
+Determining probable structures...done.
+Writing output ct file...done.
+Calculation of probable structures complete.
+No Error: Matches with accepted test.
+threshold_option testing finished.
+

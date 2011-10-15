@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "bipartition", "bipartition.icproj", "{41ECAF9F-CE3A-4D80-A832-CA31B3191D4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41ECAF9F-CE3A-4D80-A832-CA31B3191D4F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{41ECAF9F-CE3A-4D80-A832-CA31B3191D4F}.Debug|Win32.Build.0 = Debug|Win32
+		{41ECAF9F-CE3A-4D80-A832-CA31B3191D4F}.Release|Win32.ActiveCfg = Release|Win32
+		{41ECAF9F-CE3A-4D80-A832-CA31B3191D4F}.Release|Win32.Build.0 = Release|Win32
+		{3A8DF75C-C997-4615-889B-33718D4821F0}.Release|Win32.Build.0 = Release|Win32
+		{3A8DF75C-C997-4615-889B-33718D4821F0}.Release|Win32.ActiveCfg = Release|Win32
+		{3A8DF75C-C997-4615-889B-33718D4821F0}.Debug|Win32.Build.0 = Debug|Win32
+		{3A8DF75C-C997-4615-889B-33718D4821F0}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

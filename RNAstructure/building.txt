@@ -1,0 +1,6 @@
+This file contains instruction for building RNAstructure for *nix (Mac OS X,
+Linux, or Unix) installations.
+
+First, edit compiler.h to indicate your C++ compiler and flags.  The default is the
+GNU compiler, g++.  Options are also pre-written for SGI, Sun, Intel, and IBM compilers.
+

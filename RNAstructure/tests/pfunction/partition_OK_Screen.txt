@@ -1,0 +1,47 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Calculating partition function...done.
+Single strand partitioning complete.
+Creating Postscript dot plot image...done.
+Dot plot output complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+constraint_file_option testing started...
+Initializing nucleic acids...done.
+Applying constraints...done.
+Calculating partition function...done.
+Single strand partitioning complete.
+Creating Postscript dot plot image...done.
+Dot plot output complete.
+No Error: Matches with accepted test.
+constraint_file_option testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Calculating partition function...done.
+Single strand partitioning complete.
+Creating Postscript dot plot image...done.
+Dot plot output complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+max_distance_option testing started...
+Initializing nucleic acids...done.
+Calculating partition function...done.
+Single strand partitioning complete.
+Creating Postscript dot plot image...done.
+Dot plot output complete.
+No Error: Matches with accepted test.
+max_distance_option testing finished.
+
+temperature_option testing started...
+Initializing nucleic acids...done.
+Setting temperature...done.
+Calculating partition function...done.
+Single strand partitioning complete.
+Creating Postscript dot plot image...done.
+Dot plot output complete.
+No Error: Matches with accepted test.
+temperature_option testing finished.
+

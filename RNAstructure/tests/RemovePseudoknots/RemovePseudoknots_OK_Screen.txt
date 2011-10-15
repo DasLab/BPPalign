@@ -1,0 +1,25 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Breaking pseudoknots...done.
+Writing output ct file...done.
+Pseudoknot breakage complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Breaking pseudoknots...done.
+Writing output ct file...done.
+Pseudoknot breakage complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+temperature_option testing started...
+Initializing nucleic acids...done.
+Setting temperature...done.
+Breaking pseudoknots...done.
+Writing output ct file...done.
+Pseudoknot breakage complete.
+No Error: Matches with accepted test.
+temperature_option testing finished.
+

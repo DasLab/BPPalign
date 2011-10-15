@@ -1,0 +1,50 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Generating suboptimal structures...done.
+Writing output ct file...done.
+Generation of suboptimal structures complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+absolute_energy_difference_option testing started...
+Initializing nucleic acids...done.
+Generating suboptimal structures...done.
+Writing output ct file...done.
+Generation of suboptimal structures complete.
+No Error: Matches with accepted test.
+absolute_energy_difference_option testing finished.
+
+constraint_file_option testing started...
+Initializing nucleic acids...done.
+Applying constraints...done.
+Generating suboptimal structures...done.
+Writing output ct file...done.
+Generation of suboptimal structures complete.
+No Error: Matches with accepted test.
+constraint_file_option testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Generating suboptimal structures...done.
+Writing output ct file...done.
+Generation of suboptimal structures complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+percent_difference_option testing started...
+Initializing nucleic acids...done.
+Generating suboptimal structures...done.
+Writing output ct file...done.
+Generation of suboptimal structures complete.
+No Error: Matches with accepted test.
+percent_difference_option testing finished.
+
+temperature_option testing started...
+Initializing nucleic acids...done.
+Setting temperature...done.
+Generating suboptimal structures...done.
+Writing output ct file...done.
+Generation of suboptimal structures complete.
+No Error: Matches with accepted test.
+temperature_option testing finished.
+

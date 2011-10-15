@@ -1,0 +1,13 @@
+seq1 seq1.seq
+seq2 seq2.seq
+mode pp
+seq1_pp_op ../my_pp1
+seq2_pp_op my_pp2
+seq1_sample_ct_op ../my_ct1_sample.txt
+seq2_sample_ct_op ../../my_ct2_sample.txt
+sample_aln_op ./my_aln_sample.txt
+seq1_map_ct_op ../my_map_ct1.txt
+seq2_map_ct_op ../../my_map_ct2.txt
+map_aln_op ../my_map_aln.txt
+nsamp 1000
+

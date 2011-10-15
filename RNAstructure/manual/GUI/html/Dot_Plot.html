@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>RNAstructure Help -- Dot Plot</title>
+    <link
+      href="Styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>RNAstructure</h1>
+    <h2>Version 5.1</h2>
+    <h2>Copyright 1996 - 2010</h2>
+    <h2>by David H. Mathews</h2>
+    <br/>
+
+    <h3>Dot Plot</h3>
+
+    <p>RNAstructure can create several types of dot plots. The Dot Plot module produces an energy dot plot for a sequence. This shows, for each possible pair, the lowest free energy for a structure that contains that pair. Energy dot plots provide a picture of all alternative secondary structures within a given free energy increment of the lowest free energy structure. A large number of dots are displayed, when a small energy increment is chosen, suggests a less well-defined predicted secondary structure. Regions with many competing base pairs may be involved in alternative secondary structures or may be regions for which secondary structure prediction is inaccurate.</p>
+    <br/>
+
+    <p><b><a name="Fold">Folding Dot Plot</a></b></p>
+    <p>Folding dot plots illustrate base pairing energies read from a CT file. To display a folding dot plot, choose "File -> Dot Plot." Thse require save files from prior <a href="Fold.html">Fold</a> calculations.</p>
+    <br/>
+
+    <p><b><a name="Partition">Partition Function Dot Plot</a></b></p>
+    <p>Partition function dot plots display the probabilities of pairs, as predicted by the <a href="Partition_Function.html">partition function</a>. Dots are displayed as -log<sub>10</sub>(probability). The default view shows all possible pairs of any probability.</p>
+    <br/>
+
+    <p>To output base pair probabilities to a plain text file, choose <a name="Probability">"Output Plot -> Write to Dot Plot File."</a> This will open a save dialog box in which the save file name can be specified.</p>
+    <br/>
+
+    <p>To output the plot as a Postscript image file, choose "Output Plot -> Write to Postscript Image File."</p>
+    <br/>
+
+    <p>Dot plots of previously calculated partition function calculations can be displayed by choosing "File -> Dot Plot Partition Function." This opens a dialog box for choosing the partition function save file.  After choosing the save file, the dot plot is displayed.</p>
+    <br/>
+
+    <p><b><a name="Dynalign">Dynalign Dot Plot</a></b></p>
+    <p>For Dynalign dot plots, a separate dot plot is generated for each of the two sequences involved. To display a Dynalign dot plot, choose "File -> Dot Plot Dynalign." This requires a save file from a prior <a href="Dynalign.html">Dynalign</a> calculation.</p>
+    <br/>
+
+    <p><b><a name="Appear">Changing the Dot Plot Appearance</a></b></p>
+    <p>The dot plot will be initially shown sized to the window in which it appears. To zoom to a specific region, the menu item "Draw -> Zoom" can be chosen to open a dialog box from which the zoom level can be adjusted. Alternatively, pressing the up or down arrow keys on the keyboard will zoom in or out, respectively. The scroll bars or arrow keys can be used to adjust the portion of the plot chosen.</p>
+    <br/>
+  
+    <p>Each color dot indicates an energy increment that is indicated by a key beneath the plot. The number of colors used in the plot can be adjusted from 3 to 15 by selecting the <a name="Colors">"Draw -> Choose Colors"</a> menu option.</p>
+    <br/>
+
+    <p>When first drawn, the energy dot plot shows all base pairs. To restrict the display to a specific energy increment, choose <a name="Range">"Draw -> Plot Range"</a>. Also, note that the range of energies can be reset to show all pairs by clicking "Reset Range" in the dialog box. It is often helpful to limit the plot range to energies close to the lowest free energy (for example, within 10%) to focus on only the low energy competing structures.</p>
+    <br/>
+
+    <p>To get the exact energy of any displayed base pair, click on the point in the plot with the left mouse button. The pair and its energy are displayed in a field above the plot.</p>  
+  </body>
+</html>

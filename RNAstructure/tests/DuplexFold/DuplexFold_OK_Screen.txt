@@ -1,0 +1,57 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Folding duplex...done.
+Writing output ct file...done.
+Duplex folding complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Folding duplex...done.
+Writing output ct file...done.
+Duplex folding complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+loop_option testing started...
+Initializing nucleic acids...done.
+Folding duplex...done.
+Writing output ct file...done.
+Duplex folding complete.
+No Error: Matches with accepted test.
+loop_option testing finished.
+
+max_structures_option testing started...
+Initializing nucleic acids...done.
+Folding duplex...done.
+Writing output ct file...done.
+Duplex folding complete.
+No Error: Matches with accepted test.
+max_structures_option testing finished.
+
+percent_option testing started...
+Initializing nucleic acids...done.
+Folding duplex...done.
+Writing output ct file...done.
+Duplex folding complete.
+No Error: Matches with accepted test.
+percent_option testing finished.
+
+temperature_option testing started...
+Initializing nucleic acids...done.
+Setting temperature...done.
+Folding duplex...done.
+Writing output ct file...done.
+Duplex folding complete.
+No Error: Matches with accepted test.
+temperature_option testing finished.
+
+window_size_option testing started...
+Initializing nucleic acids...done.
+Folding duplex...done.
+Writing output ct file...done.
+Duplex folding complete.
+No Error: Matches with accepted test.
+window_size_option testing finished.
+

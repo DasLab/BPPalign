@@ -1,0 +1,40 @@
+a:link    { color: green; }
+a:visited { color: red; }
+a:hover   { color: blue; }
+
+body {
+    background-color: white;
+    font-family:      Courier, serif;
+}
+
+h1 {
+    font-family:   Courier, serif;
+    color:         blue;
+    margin-top:    0px;
+    margin-bottom: 10px;
+    text-align:    center;
+}
+	  
+h2 {
+    font-family:   Courier, serif;
+    color:         black;
+    margin-top:    0px;
+    margin-bottom: 0px;
+    text-align:    center;
+}
+
+h3 {
+    font-family:     Courier, serif;
+    color:           black;
+    margin-top:      20px;
+    margin-bottom:   0px;
+    text-decoration: underline;
+    text-align:      center;
+}
+	 
+p {
+    font-family:   Courier, serif;
+    color:         black;
+    margin-top:    0px;
+    margin-bottom: 0px;
+}

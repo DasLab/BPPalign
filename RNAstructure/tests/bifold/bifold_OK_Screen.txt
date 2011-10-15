@@ -1,0 +1,73 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+intramolecular_option testing started...
+Initializing nucleic acids...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+intramolecular_option testing finished.
+
+loop_option testing started...
+Initializing nucleic acids...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+loop_option testing finished.
+
+max_structures_option testing started...
+Initializing nucleic acids...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+max_structures_option testing finished.
+
+percent_diference_option testing started...
+Initializing nucleic acids...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+percent_diference_option testing finished.
+
+save_file_option testing started...
+Initializing nucleic acids...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+save_file_option testing finished.
+
+temperature_option testing started...
+Initializing nucleic acids...done.
+Setting temperature...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+temperature_option testing finished.
+
+window_size_option testing started...
+Initializing nucleic acids...done.
+Folding two strands...done.
+Writing output ct file...done.
+Bimolecular folding complete.
+No Error: Matches with accepted test.
+window_size_option testing finished.
+

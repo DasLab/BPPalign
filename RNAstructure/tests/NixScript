@@ -1,0 +1,415 @@
+#!/bin/bash
+
+##########
+## Diff functions: Generic diff and screen diff wrapper
+##########
+
+function executeDiff {
+diff $3 $1 $2 > $1Diff >& $1_diff_test.txt
+
+if [[ -s $1_diff_test.txt || -s $1Diff ]]
+then
+echo 'Possible Error: Difference with accepted test.'
+mv $1* RNAstructure_error_tests/
+else
+echo 'No Error: Matches with accepted test.'
+rm $1*
+fi
+}
+
+function executeScreenDiff {
+executeDiff $1_test_screen.txt $1_OK_Screen.txt
+}
+
+##########
+## Check a plot from a binary file.
+##########
+
+function executePlotCheck {
+../exe/$4 $1 $5_$2_test.ps $6
+executeDiff $5_$2_test.ps $3
+rm $1
+}
+
+##########
+## Generic testing function
+##########
+
+function executeTest {
+echo $3' testing started...' > Temp1.txt
+../exe/$2 $4 $1_$3_test$5 $8 >& Temp2.txt
+
+if [[ $6 = perlYes ]]
+then
+perl -e 'undef$/; $t=<>; $t=~s/'$7'\.\..+?done\./'$7'...done./s; print $t;' Temp2.txt > Temp3.txt
+else
+cat Temp2.txt > Temp3.txt
+fi
+
+if [[ $9 = pfs || $9 = sav ]]
+then
+executePlotCheck $1_$3_test.$9 $3 $1_$3_$9_plot.ps ${10} $2 >& Temp4.txt
+else
+executeDiff $1_$3_test$9$5 $1_$3_OK$5 >& Temp4.txt
+fi 
+
+echo $3' testing finished.' > Temp5.txt
+
+cat Temp1.txt >> $1_test_screen.txt
+cat Temp3.txt >> $1_test_screen.txt
+cat Temp4.txt >> $1_test_screen.txt
+cat Temp5.txt >> $1_test_screen.txt
+echo '' >> $1_test_screen.txt
+rm Temp*.txt
+}
+
+##########
+## Test wrapper functions for specific interfaces
+##########
+
+function testAllSub {
+testType=$1
+shift
+executeTest AllSub/AllSub AllSub $testType testFiles/testFile_RA7680.seq .ct perlYes structures "$*"
+}
+
+function testBifold {
+testType=$1
+shift
+executeTest bifold/bifold bifold $testType 'testFiles/testFile_ec5s.seq testFiles/testFile_ca5s.seq' .ct perlYes strands "$*"
+}
+
+function testBipartition {
+testType=$1
+shift
+executeTest bipartition/bipartition bipartition $testType 'testFiles/testFile_ec5s.seq testFiles/testFile_ca5s.seq' .pfs perlYes 'function' "$*" pfs ProbabilityPlot
+}
+
+function testDuplexFold {
+testType=$1
+shift
+executeTest DuplexFold/DuplexFold DuplexFold $testType 'testFiles/testFile_ec5s.seq testFiles/testFile_ca5s.seq' .ct perlNo none "$*"
+}
+
+function testDraw {
+testType=$1
+shift
+executeTest draw/draw draw $testType RA7680.ct .ps perlNo none "$*"
+}
+
+function testEfn2 {
+testType=$1
+shift
+executeTest efn2/efn2 efn2 $testType RA7680.ct .out perlYes strand "$*"
+}
+
+function testFold {
+testType=$1
+shift
+executeTest fold/Fold Fold $testType testFiles/testFile_RA7680.seq .ct perlYes strand "$*"
+}
+
+function testMaxExpect {
+testType=$1
+shift
+executeTest MaxExpect/MaxExpect MaxExpect $testType RA7680.pfs .ct perlNo none "$*"
+}
+
+function testOligoscreen {
+testType=$1
+shift
+executeTest oligoscreen/oligoscreen oligoscreen $testType testFiles/testFile_oligoscreen_example.lis .rep perlNo none "$*"
+}
+
+function testPartition {
+testType=$1
+shift
+executeTest pfunction/partition partition $testType testFiles/testFile_RA7680.seq .pfs perlYes 'function' "$*" pfs ProbabilityPlot
+}
+
+function testProbablePair {
+testType=$1
+shift
+executeTest ProbablePair/ProbablePair ProbablePair $testType RA7680.pfs .ct perlNo none "$*"
+}
+
+function testRemovePseudoknots {
+testType=$1
+shift
+executeTest RemovePseudoknots/RemovePseudoknots RemovePseudoknots $testType testFiles/testFile_knotted.ct .ct perlYes pseudoknots "$*"
+}
+
+function testRefold {
+testType=$1
+shift
+executeTest refold/refold refold $testType RA7680.sav .ct perlNo none "$*"
+}
+
+function testStochastic {
+testType=$1
+shift
+executeTest stochastic/stochastic stochastic $testType RA7680.pfs .ct perlYes ensemble "$*"
+}
+
+##########
+## Main entry point
+##########
+
+# Test options of AllSub.
+if [[ $1 = AllSub ]]
+then
+touch $1/$1_test_screen.txt
+testAllSub without_options
+testAllSub absolute_energy_difference_option -a 1
+testAllSub constraint_file_option -c $1/$1_constraint_file_option_OK_constraints.con
+testAllSub dna_option -d -a 0.1
+testAllSub percent_difference_option -p 1
+testAllSub temperature_option -t 150
+executeScreenDiff AllSub/AllSub
+
+# Test options of bifold.
+elif [[ $1 = bifold ]]
+then
+touch $1/$1_test_screen.txt
+
+echo 'Option check started...'
+testBifold without_options
+testBifold dna_option -d
+testBifold intramolecular_option -i
+testBifold loop_option -l 5
+testBifold max_structures_option -m 2
+testBifold percent_diference_option -p 1
+testBifold save_file_option -s bifold/bifold_sav_test.sav
+testBifold temperature_option -t 250
+testBifold window_size_option -w 20
+executeScreenDiff bifold/bifold
+echo 'Option check finished.'
+
+echo 'Save file check started...'
+executePlotCheck bifold/bifold_sav_test.sav bifold bifold/bifold_sav_plot.ps EnergyPlot bifold
+echo 'Save file check finished.'
+
+# Test options of bipartition.
+elif [[ $1 = bipartition ]]
+then
+touch $1/$1_test_screen.txt
+
+testBipartition without_options
+testBipartition dna_option -d
+testBipartition temperature_option -t 150
+executeScreenDiff bipartition/bipartition
+
+# Test simple case of ct2dot. This is a reciprocal of the dot2ct case (spacing is a little different).
+elif [[ $1 = ct2dot ]]
+then
+../exe/ct2dot ct2dot2ct/RA7680.ct 1 test.bracket
+executeDiff test.bracket ct2dot2ct/RA7680.bracket -b
+
+# Test simple case of dot2ct. This is a reciprocal of the ct2dot case (spacing is a little different).
+elif [[ $1 = dot2ct ]]
+then
+../exe/dot2ct ct2dot2ct/RA7680.bracket test.ct
+executeDiff test.ct ct2dot2ct/RA7680.ct -b
+
+# Test DotPlots (EnergyPlot and ProbabilityPlot)
+# Note that only ProbabilityPlot tests the entries option, this is because the two plot programs are the same
+# program, run with different parameters to get different behavior.
+elif [[ $1 = DotPlots ]]
+then
+../exe/Fold testFiles/testFile_RA7680.seq RA7680.ct -s RA7680.sav >& TempHidden.txt
+../exe/partition testFiles/testFile_RA7680.seq RA7680.pfs >& TempHidden2.txt
+
+executePlotCheck RA7680.sav DotPlots DotPlots/DotPlots_energy_plot_sav_plot.ps EnergyPlot EnergyPlot
+executePlotCheck RA7680.pfs DotPlots DotPlots/DotPlots_probability_plot_changed_entries_pfs_plot.ps ProbabilityPlot ProbabilityPlot '-e 3'
+
+../exe/Fold testFiles/testFile_RA7680.seq RA7680.ct -s RA7680.sav >& TempHidden.txt
+../exe/partition testFiles/testFile_RA7680.seq RA7680.pfs >& TempHidden2.txt
+
+../exe/EnergyPlot RA7680.sav testPlot.dp -t >& TempHidden3.txt
+executeDiff testPlot.dp DotPlots/text_plot.dp
+rm -f RA7690* TempHidden*
+
+# Test options of DuplexFold.
+elif [[ $1 = DuplexFold ]]
+then
+touch $1/$1_test_screen.txt
+
+testDuplexFold without_options
+testDuplexFold dna_option -d
+testDuplexFold loop_option -l 10
+testDuplexFold max_structures_option -m 5
+testDuplexFold percent_option -p 1
+testDuplexFold temperature_option -t 150
+testDuplexFold window_size_option -w 5
+executeScreenDiff DuplexFold/DuplexFold
+
+# Test options of draw.
+elif [[ $1 = draw ]]
+then
+touch $1/$1_test_screen.txt
+
+../exe/Fold testFiles/testFile_RA7680.seq RA7680.ct >& TempHidden.txt
+../exe/partition testFiles/testFile_RA7680.seq RA7680.pfs >& TempHidden2.txt
+testDraw without_options
+testDraw probability_option -p RA7680.pfs
+testDraw shape_option -s testFiles/testFile_tRNA.shape
+executeScreenDiff draw/draw
+rm -f RA7680* TempHidden*
+
+# Test dynalign.
+elif [[ $1 = dynalign ]]
+then
+echo 'dynalign Testing Protocol Not Yet Determined.'
+
+# Test options of efn2.
+elif [[ $1 = efn2 ]]
+then
+touch $1/$1_test_screen.txt
+
+../exe/Fold testFiles/testFile_RA7680.seq RA7680.ct >& TempHidden.txt
+testEfn2 without_options
+testEfn2 dna_option -d
+testEfn2 print_option -p
+testEfn2 temperature_option -t 150
+testEfn2 write_thermodynamic_file_option -w
+executeScreenDiff efn2/efn2
+rm -f RA7680* TempHidden*
+
+# Test options of Fold.
+elif [[ $1 = Fold ]]
+then
+touch fold/Fold_test_screen.txt
+shapeOption='-sh testFiles/testFile_tRNA.shape'
+
+echo 'Option check started...'
+testFold without_options
+testFold constraint_file_option -c fold/Fold_constraint_file_option_OK_constraints.con
+testFold dna_option -d
+testFold loop_option -l 10
+testFold max_structures_option -m 5
+testFold max_distance_option -md 25
+testFold percent_option -p 5
+testFold save_option -s fold/Fold_sav_test.sav
+testFold shape_option $shapeOption
+testFold shape_intercept_option $shapeOption -si 0.9
+testFold shape_slope_option $shapeOption -sm -0.2
+testFold temperature_option -t 150
+testFold window_option -w 15
+executeScreenDiff fold/Fold
+echo 'Option check finished.'
+
+echo 'Save file check started...'
+executePlotCheck fold/Fold_sav_test.sav Fold fold/Fold_sav_plot.ps EnergyPlot
+echo 'Save file check finished.'
+
+# Test options of MaxExpect.
+elif [[ $1 = MaxExpect ]]
+then
+touch $1/$1_test_screen.txt
+../exe/partition testFiles/testFile_RA7680.seq RA7680.pfs >& TempHidden2.txt
+
+testMaxExpect without_options
+testMaxExpect dna_option -d
+testMaxExpect gamma_option -g 2
+testMaxExpect percent_option -p 10
+testMaxExpect structures_option -s 5
+testMaxExpect window_size_option -w 2
+executeScreenDiff MaxExpect/MaxExpect
+rm -f RA7680* TempHidden*
+
+# Test NAPSS.
+elif [[ $1 = NAPSS ]]
+then
+../exe/NAPSS NAPSS/config.txt <<EOF
+y
+EOF
+executeDiff NAPSS/NAPSS_test_general.ct NAPSS/NAPSS_OK_general.ct
+
+# Test options of oligoscreen.
+elif [[ $1 = oligoscreen ]]
+then
+touch $1/$1_test_screen.txt
+
+testOligoscreen without_options
+testOligoscreen dna_option -d
+testOligoscreen temperature_option -t 150
+executeScreenDiff oligoscreen/oligoscreen
+
+# Test oligowalk.
+elif [[ $1 = oligowalk ]]
+then
+echo 'oligowalk Testing Protocol Not Yet Determined.'
+
+# Test PARTS.
+elif [[ $1 = PARTS ]]
+then
+echo 'PARTS Testing Protocol Not Yet Determined.'
+
+# Test options of pfunction.
+elif [[ $1 = pfunction ]]
+then
+touch pfunction/partition_test_screen.txt
+shapeOption='-sh testFiles/testFile_tRNA.shape'
+
+testPartition without_options
+testPartition constraint_file_option -c pfunction/partition_constraint_file_option_OK_constraints.con
+testPartition dna_option -d
+testPartition max_distance_option -md 15
+#testPartition shape_option -sh testFiles/testFile_tRNA.shape
+#testPartition shape_intercept_option $shapeOption -si 1.3
+#testPartition shape_slope_option $shapeOption -sm -0.5
+testPartition temperature_option -t 150
+executeScreenDiff pfunction/partition
+
+# Test options of ProbablePair.
+elif [[ $1 = ProbablePair ]]
+then
+touch $1/$1_test_screen.txt
+../exe/partition testFiles/testFile_RA7680.seq RA7680.pfs >& TempHidden2.txt
+
+testProbablePair without_options
+testProbablePair threshold_option -t 0.92
+executeScreenDiff ProbablePair/ProbablePair
+rm -f RA7680* TempHidden*
+
+# Test options of refold.
+elif [[ $1 = refold ]]
+then
+touch $1/$1_test_screen.txt
+../exe/Fold testFiles/testFile_RA7680.seq RA7680.ct -s RA7680.sav >& TempHidden.txt
+
+testRefold without_options
+testRefold max_structures_option -m 3
+testRefold percent_option -p 5
+testRefold window_size_option -w 20
+executeScreenDiff refold/refold
+rm -f RA7680* TempHidden*
+
+# Test options of RemovePseudoknots.
+elif [[ $1 = RemovePseudoknots ]]
+then
+touch $1/$1_test_screen.txt
+
+testRemovePseudoknots without_options
+testRemovePseudoknots dna_option -d
+testRemovePseudoknots temperature_option -t 150
+executeScreenDiff RemovePseudoknots/RemovePseudoknots
+
+# Test options of stochastic.
+elif [[ $1 = stochastic ]]
+then
+touch $1/$1_test_screen.txt
+../exe/partition testFiles/testFile_RA7680.seq RA7680.pfs >& TempHidden2.txt
+
+testStochastic without_options
+testStochastic ensemble_option -e 2
+testStochastic seed_option -s 2
+executeScreenDiff stochastic/stochastic
+rm -f RA7680* TempHidden*
+
+# Clean up temporary files made by testing.
+elif [[ $1 = cleanup ]]
+then
+rm -f RA7680*
+find RNAstructure_error_tests/ -type f -size 0 -exec rm {} \;
+fi

@@ -1,0 +1,110 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+constraint_file_option testing started...
+Initializing nucleic acids...done.
+Applying constraints...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+constraint_file_option testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+loop_option testing started...
+Initializing nucleic acids...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+loop_option testing finished.
+
+max_structures_option testing started...
+Initializing nucleic acids...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+max_structures_option testing finished.
+
+max_distance_option testing started...
+Initializing nucleic acids...done.
+Setting maximum distance between paired nucleotides...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+max_distance_option testing finished.
+
+percent_option testing started...
+Initializing nucleic acids...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+percent_option testing finished.
+
+save_option testing started...
+Initializing nucleic acids...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+save_option testing finished.
+
+shape_option testing started...
+Initializing nucleic acids...done.
+Applying constraints...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+shape_option testing finished.
+
+shape_intercept_option testing started...
+Initializing nucleic acids...done.
+Applying constraints...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+shape_intercept_option testing finished.
+
+shape_slope_option testing started...
+Initializing nucleic acids...done.
+Applying constraints...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+shape_slope_option testing finished.
+
+temperature_option testing started...
+Initializing nucleic acids...done.
+Setting temperature...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+temperature_option testing finished.
+
+window_option testing started...
+Initializing nucleic acids...done.
+Folding single strand...done.
+Writing output ct file...done.
+Single strand folding complete.
+No Error: Matches with accepted test.
+window_option testing finished.
+

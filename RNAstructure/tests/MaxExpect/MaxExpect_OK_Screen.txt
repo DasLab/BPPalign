@@ -1,0 +1,48 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Calculating maximum expected accuracy structures...done.
+Writing output ct file...done.
+Calculation of maximum expected accuracy structures complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+dna_option testing started...
+Initializing nucleic acids...done.
+Calculating maximum expected accuracy structures...done.
+Writing output ct file...done.
+Calculation of maximum expected accuracy structures complete.
+No Error: Matches with accepted test.
+dna_option testing finished.
+
+gamma_option testing started...
+Initializing nucleic acids...done.
+Calculating maximum expected accuracy structures...done.
+Writing output ct file...done.
+Calculation of maximum expected accuracy structures complete.
+No Error: Matches with accepted test.
+gamma_option testing finished.
+
+percent_option testing started...
+Initializing nucleic acids...done.
+Calculating maximum expected accuracy structures...done.
+Writing output ct file...done.
+Calculation of maximum expected accuracy structures complete.
+No Error: Matches with accepted test.
+percent_option testing finished.
+
+structures_option testing started...
+Initializing nucleic acids...done.
+Calculating maximum expected accuracy structures...done.
+Writing output ct file...done.
+Calculation of maximum expected accuracy structures complete.
+No Error: Matches with accepted test.
+structures_option testing finished.
+
+window_size_option testing started...
+Initializing nucleic acids...done.
+Calculating maximum expected accuracy structures...done.
+Writing output ct file...done.
+Calculation of maximum expected accuracy structures complete.
+No Error: Matches with accepted test.
+window_size_option testing finished.
+

@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>RNAstructure Help -- Draw</title>
+    <link
+      href="Styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    </style>
+  </head>
+  <body>
+    <h1>RNAstructure</h1>
+    <h2>Version 5.1</h2>
+    <h2>Copyright 1996 - 2010</h2>
+    <h2>by David H. Mathews</h2>
+    <br/>
+
+    <h3>Draw</h3>
+
+    <p><b>How to display an RNA secondary structure</b></p>
+    <ol>
+      <li>Select "File -> Draw."</li>
+      <li>Select an existing CT file to draw from the open dialog.</li>
+    </ol>
+    <p>Note that, currently, structures without pseudoknots are draw using the conventional collapsed format where paired nucleotides are close. Structures with pseudoknots are drawn using a circular format</p>
+    <p>&nbsp;</p>
+<p><b><a name="Scroll">Scrolling</a></b></p> 
+    <p>If the structure is larger than the window, scroll bars appear at the edge of the window. The arrow keys can also be used to navigate around the screen.</p>
+    <br/>
+
+    <p><b><a name="Choose">Choosing a Structure</a></b></p>
+    <p>If the CT file contains more than one structure, you may select which to view. On the menu, select "Draw -> Structure Number." Click the left/right arrows to select the desired structures. If clicking does not change the structure, then the CT file contains only one structure.</p>
+    <br/>
+<br/>
+
+    <p>Structures can also be chosen from the keyboard without using the menu option. Pressing the left arrow key will change the current structure to a more suboptimal structure. Pressing the right arrow key will change to a structure with free energy closer to the minimal free energy structure.</p>
+    <br/>
+
+    <p>Limitations of the secondary structure prediction algorithm may cause the order in which structures are displayed to be misleading. The output structures are sorted according to the lowest free energy, but structure #1, although predicted to be most stable, might not be the actual structure.</p>
+    <br/>
+
+    <p><b><a name="Zoom">Zooming</a></b></p>
+    <p>Select "Structure -> Zoom". Click the up/down arrows to select the desired zoom factor. Pressing the down arrow or up arrow can be used to zoom out or in, respectively.</p>
+    <br/>
+
+    <p>Zooming can also be performed from the keyboard without using the menu options. Pressing the up arrow key will zoom in. Zoom out can be performed by pressing the down arrow key.</p>
+    <p><br/>
+  <strong>Printing</strong></p>
+    <p>    Select "File -> Print." Choose desired printer and hit OK.
+      </p>
+  </p>
+    <p>&nbsp;</p>
+    <p><strong>Copying</strong></p>
+    <p>On Windows, the image of the currently displayed structure can be copied to the clipboard by selecting &quot;Edit-&gt;Copy&quot; or by typing control-C.<br/>
+      
+    </p>
+<p><b><a name="Publication">Publication Quality Output</a></b></p>
+    <p>There are several methods for producing publication quality figures from the RNAstructure results.</p>
+    <br/>
+
+    <p>In general, the Draw module alone will not produce publication quality images of secondary structures. The program XRNA, created and distributed by the Santa Cruz RNA Center, is one of several tools for drawing RNA secondary structures and producing high quality output. This program is available for download from <u>http://rna.ucsc.edu/rnacenter/</u>. It is written in Java and will run on most computer architectures. The draw module from RNAstructure will write .txt helix input files that are read by XRNA to describe the location of helixes. When displaying a secondary structure, this is accessed by "Draw -> Write to Helix (Text) File".</p>
+    <br/>
+
+    <p>An alternative method for creating publication quality images is export of the desired image to a Postscript file. Both structures and dot plots can be exported to Postscript with their associated menu commands, under the "Draw" or "Output Plot" menus, respectively. Structures, in particular, can be exported annotated or plain.</p>
+    <br/>
+
+    <p><b><a name="Annotation">Color Annotation of Additional Information</a></b></p>
+    <p>The drawing can be annotated with additional information (by the form of color coding) in one of two ways. In both forms of annotation, higher probabilities for a particular pair indicate that the pair is more likely to be correctly predicted. Selecting either of the menu options defined below will open a dialog box which will allow the appropriate type of file to be selected.</p>
+
+    <ol>
+      <li><a name="Base">Base Pairing Probabilities</a>: If the partition function has been used to predict base pairing probabilities for the sequence, show the color annotation by clicking "Annotations -> Add Color Annotation". To display the color key used for this annotation, click "Annotations -> Show Color Annotation Key".</li>
+      <li><a name="SHAPE">SHAPE</a> Data: If SHAPE constraints were added to the sequence prior to folding, display the data by clicking "Annotations -> Add SHAPE Annotation". To display the color key used for this annotation, click "Annotations -> Show SHAPE Annotation Key".</li>
+    </ol>
+
+    <p>Note that base pairing data and SHAPE data cannot be displayed together on a drawing; for the sake of clarity, they are always displayed separately.</p>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "scorer", "scorer.icproj", "{20999FAA-850F-4CEB-BE98-E8C0A374DC6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20999FAA-850F-4CEB-BE98-E8C0A374DC6F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{20999FAA-850F-4CEB-BE98-E8C0A374DC6F}.Debug|Win32.Build.0 = Debug|Win32
+		{20999FAA-850F-4CEB-BE98-E8C0A374DC6F}.Release|Win32.ActiveCfg = Release|Win32
+		{20999FAA-850F-4CEB-BE98-E8C0A374DC6F}.Release|Win32.Build.0 = Release|Win32
+		{2795C4A0-7573-4BD4-BD59-3AD393C622B8}.Release|Win32.Build.0 = Release|Win32
+		{2795C4A0-7573-4BD4-BD59-3AD393C622B8}.Release|Win32.ActiveCfg = Release|Win32
+		{2795C4A0-7573-4BD4-BD59-3AD393C622B8}.Debug|Win32.Build.0 = Debug|Win32
+		{2795C4A0-7573-4BD4-BD59-3AD393C622B8}.Debug|Win32.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+without_options testing started...
+Initializing nucleic acids...done.
+Refolding nucleic acids...done.
+Writing output ct file...done.
+Refolding complete.
+No Error: Matches with accepted test.
+without_options testing finished.
+
+max_structures_option testing started...
+Initializing nucleic acids...done.
+Refolding nucleic acids...done.
+Writing output ct file...done.
+Refolding complete.
+No Error: Matches with accepted test.
+max_structures_option testing finished.
+
+percent_option testing started...
+Initializing nucleic acids...done.
+Refolding nucleic acids...done.
+Writing output ct file...done.
+Refolding complete.
+No Error: Matches with accepted test.
+percent_option testing finished.
+
+window_size_option testing started...
+Initializing nucleic acids...done.
+Refolding nucleic acids...done.
+Writing output ct file...done.
+Refolding complete.
+No Error: Matches with accepted test.
+window_size_option testing finished.
+
