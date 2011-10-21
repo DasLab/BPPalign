@@ -1,4 +1,4 @@
-outpath = '../gly/EXAMPLE_OUTPUT/gly_seqs/';
+outpath = '../gly/gly_seqs/';
 [nres, all_bpp ] = read_bpps( outpath );
 
 % sequence of 'reference' sequence -- here the adenine riboswitch add from Vibrio vulnificus

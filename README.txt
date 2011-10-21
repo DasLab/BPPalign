@@ -16,6 +16,21 @@ Requirements:
 
 BPPalign has been tested on Mac and some Linux variants.
 
+##########################################
+Before you run, compile RNAstructure
+##########################################
+This follows the standard commands:
+
+cd RNAstructure
+make all
+
+But then you must also set the $DATAPATH variable to the data_tables/ directory inside RNAstructure. E.g., in bash:
+
+export DATAPATH=RNAstructure/data_tables  [replace this with the path to the RNAstructure directory]
+
+This command can also go into your ~/.bashrc file.
+
+
 #################################
 EXAMPLE 1   [purine riboswitch]
 #################################
@@ -50,17 +65,21 @@ EXAMPLE 2   [double glycine riboswitch]
 ##########################################
 Go into directory gly/. Run 
 
-  get_double_sequences.py
+  get_double_sequences.py gly_rfam.txt
 
 This looks at the alignment of single-riboswitch domains in gly_rfam.txt and finds pairs of single aptamers that can go together into double riboswitches. Some nucleotides in the linker are tagged 'X'. The output is in gly2_rfam.txt. 
 
+For the paper, I also just took to the first 360 sequences (the rest are marine metagenome shotgun sequences.):
+
+head -n 360 gly2_rfam.txt > gly2_rfam_nometagenome.txt
+
 Then, again. retrieve sequences with downstream and upstream flanking regions -- also fillin 'X' nucleotides in the linker:
 
-../scripts/get_original_sequences.py  gly2_rfam.txt gly_seqs 100 100
+../scripts/get_original_sequences.py  gly2_rfam_nometagenome.txt gly_seqs 100 100
 
 Here, 100 100 means get 100 nucleotides both upstream and downstream of the double-riboswitch domain. Then run RNAstructure on all these sequences:
 
-../scripts/get_original_sequences.py  gly2_rfam.txt gly_seqs 100 100
+../scripts/run_partition.py  gly_seqs/*seq 
 
 Go back up and into the scripts/ directory. In MATLAB, run the commands in 
 

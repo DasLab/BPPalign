@@ -1,3 +1,2 @@
-../scripts/get_original_sequences.py  add_rfam.txt add_seqs
- 10 70
+../scripts/get_original_sequences.py  add_rfam.txt add_seqs 10 70
 ../scripts/run_partition.py  add_seqs/*seq 

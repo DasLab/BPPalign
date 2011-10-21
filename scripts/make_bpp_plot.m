@@ -10,6 +10,7 @@ function bpp_mean = make_bpp_plot( nres, all_bpp, outpath, ref, structures , box
 %  whichseq   = [optional] which bpps to average over. 
 %  REDUNDANCY_CUTOFF = [default 0.99] throw away sequences that are similar at this level
 %
+% (C) R. Das, Stanford University, 2011
 
 % need to align to some template sequence.
 align_file = [outpath,'/new_align.txt'];
