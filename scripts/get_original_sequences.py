@@ -24,8 +24,13 @@ for i in range( len(lines) ):
     line = lines[i]
 
     cols = string.split( line )
-    tag = cols[0]
-    seq = cols[1][:-1]
+    if len( cols ) == 2:
+        tag = cols[0]
+        seq = cols[1][:-1]
+    else:
+        assert( len( cols ) == 3 )
+        tag = cols[1]
+        seq = cols[2][:-1]
 
     cols = tag.split( '/' )
     id = cols[0]

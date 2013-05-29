@@ -8,7 +8,7 @@ for i = 1:length( align_lines )
   line = align_lines{i};
   count = 0;
   for j = 1:length( line )
-    if line(j) ~= '.'
+    if line(j) ~= '.' & line(j)~='-'
       count = count+1;
       align_matrix(j,i) = count;
     end

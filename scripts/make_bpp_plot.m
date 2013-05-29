@@ -14,9 +14,9 @@ function bpp_mean = make_bpp_plot( nres, all_bpp, outpath, ref, structures , box
 
 % need to align to some template sequence.
 align_file = [outpath,'/new_align.txt'];
-[ids, align_lines ] = textread( align_file, '%s %s' );
+[ids, align_lines ] = read_align_file( align_file );
 
-if exist( 'whichseq' ) & ~isempty( whichseq); ids = ids( whichseq); align_lines = align_lines( whichseq ); nres = nres( whichseq); all_bpp = all_bpp( whichseq); end;
+if exist( 'whichseq','var' ) & ~isempty( whichseq); ids = ids( whichseq); align_lines = align_lines( whichseq ); nres = nres( whichseq); all_bpp = all_bpp( whichseq); end;
 if ~exist( 'REDUNDANCY_CUTOFF'); REDUNDANCY_CUTOFF = 0.99; end;
 
 % find the sequence in the alignment that corresponds to desired 'reference', e.g., V. vulnificus for
@@ -49,7 +49,7 @@ for i = gp
   if max( goodres_mapped ) <= length( all_bpp{i} )  
     bpp_contribution = all_bpp{i}( goodres_mapped, goodres_mapped );
     bpp_mean( goodres, goodres ) = bpp_mean( goodres, goodres ) + bpp_contribution;
-  
+    
     %if length( bpp_contribution ) >192 &  max( bpp_contribution( 98, 192) ) > 0.1; fprintf( 'feature1 --> %d\n', i);end;
     %if length( bpp_contribution )> 312 & max( bpp_contribution( 195, 308:312) ) > 0.1; fprintf( 'feature2 --> %d\n', i);end;
   end
@@ -81,7 +81,7 @@ if exist( 'structures' )
   end
 end
 
-if exist( 'box_bounds' )
+if exist( 'box_bounds' ) & ~isempty( box_bounds )
   rectangle( 'Position', [ (box_bounds(1) + 0.5)  ( box_bounds(1) + 0.5 ) ...
 		    ( nres_ref - box_bounds(2) - box_bounds(1) ) ...
 		    ( nres_ref - box_bounds(2) - box_bounds(1) ) ] );
